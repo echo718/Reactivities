@@ -1,0 +1,12 @@
+D:\udemy\activity\Reactivities\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\udemy\activity\Reactivities\Domain\bin\Debug\net7.0\Domain.dll
+D:\udemy\activity\Reactivities\Domain\bin\Debug\net7.0\Domain.pdb
+D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\Domain.dll
+D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\Domain.pdb
+D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\ref\Domain.dll
