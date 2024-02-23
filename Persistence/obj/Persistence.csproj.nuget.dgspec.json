@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "d:\\udemy\\activity\\Reactivities\\Persistence\\Persistence.csproj": {}
+    "D:\\udemy\\activity\\Reactivities\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
     "D:\\udemy\\activity\\Reactivities\\Domain\\Domain.csproj": {
@@ -59,14 +59,14 @@
         }
       }
     },
-    "d:\\udemy\\activity\\Reactivities\\Persistence\\Persistence.csproj": {
+    "D:\\udemy\\activity\\Reactivities\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\udemy\\activity\\Reactivities\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "D:\\udemy\\activity\\Reactivities\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "d:\\udemy\\activity\\Reactivities\\Persistence\\Persistence.csproj",
+        "projectPath": "D:\\udemy\\activity\\Reactivities\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\sunto\\.nuget\\packages\\",
-        "outputPath": "d:\\udemy\\activity\\Reactivities\\Persistence\\obj\\",
+        "outputPath": "D:\\udemy\\activity\\Reactivities\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sunto\\AppData\\Roaming\\NuGet\\NuGet.Config",
