@@ -78,3 +78,6 @@ D:\udemy\activity\Reactivities\api\bin\Debug\net7.0\MediatR.Contracts.dll
 D:\udemy\activity\Reactivities\api\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\udemy\activity\Reactivities\api\bin\Debug\net7.0\AutoMapper.dll
 D:\udemy\activity\Reactivities\api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\udemy\activity\Reactivities\api\bin\Debug\net7.0\FluentValidation.dll
+D:\udemy\activity\Reactivities\api\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+D:\udemy\activity\Reactivities\api\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
