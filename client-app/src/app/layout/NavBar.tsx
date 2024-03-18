@@ -22,6 +22,7 @@ export const Navbar = () => {
             to="/createActivity"
           />
         </Menu.Item>
+        <Menu.Item name="Errors" as={NavLink} to="/errors" />
       </Container>
     </Menu>
   );
