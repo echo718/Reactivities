@@ -24,7 +24,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
     <Segment.Group>
       <Segment basic attached="top" style={{ padding: "0" }}>
         <Image
-          src={`/assets/categoryImages/${activity.category.toLowerCase()}.jpg`}
+          src={`/assets/categoryImages/${activity.category?.toLowerCase()}.jpg`}
           fluid
           style={activityImageStyle}
         />
