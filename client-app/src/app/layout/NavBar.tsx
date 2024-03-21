@@ -14,6 +14,7 @@ export const Navbar = () => {
           Reactivities
         </Menu.Item>
         <Menu.Item name="activities" as={NavLink} to="/activities" />
+        <Menu.Item name="Errors" as={NavLink} to="/errors" />
         <Menu.Item>
           <Button
             positive
@@ -22,7 +23,6 @@ export const Navbar = () => {
             to="/createActivity"
           />
         </Menu.Item>
-        <Menu.Item name="Errors" as={NavLink} to="/errors" />
       </Container>
     </Menu>
   );
