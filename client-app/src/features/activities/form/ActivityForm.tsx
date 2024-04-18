@@ -1,13 +1,17 @@
-import { Button, FormField, Label, Segment } from "semantic-ui-react";
-import { ChangeEvent, useEffect, useState } from "react";
+import { Button, Segment } from "semantic-ui-react";
+import { useEffect, useState } from "react";
 import { useStore } from "../../../app/stores/store";
 import { observer } from "mobx-react-lite";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Activity } from "../../../app/models/activity";
 import { LoadingComponent } from "../../../app/layout/LoadingComponent";
-import { v4 as uuid } from "uuid";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 import * as Yup from "yup";
+import { CustomTextInput } from "../../../app/common/form/CustomTextInput";
+import { CustomTextArea } from "../../../app/common/form/CustomTextArea";
+import { categoryOptions } from "../../../app/common/options/categoryOptions";
+import { CustomSelect } from "../../../app/common/form/CustomSelect";
+import { CustomDatePicker } from "../../../app/common/form/CustomDatePicker";
 
 export const ActivityForm = observer(() => {
   const { activityStore } = useStore();
@@ -26,13 +30,18 @@ export const ActivityForm = observer(() => {
     title: "",
     category: "",
     description: "",
-    date: "",
+    date: null,
     city: "",
     venue: "",
   });
 
   const validationSchema = Yup.object({
     title: Yup.string().required("The activity title is required"),
+    description: Yup.string().required("The activity description is required"),
+    category: Yup.string().required("The activity category is required"),
+    date: Yup.string().required("The activity date is required"),
+    venue: Yup.string().required("The activity venue is required"),
+    city: Yup.string().required("The activity city is required"),
   });
 
   useEffect(() => {
@@ -72,19 +81,26 @@ export const ActivityForm = observer(() => {
       >
         {({ handleSubmit }) => (
           <Form className="ui form" onSubmit={handleSubmit} autoComplete="off">
-            <FormField>
-              <Field placeholder="Title" name="title" />
-              <ErrorMessage
-                name="title"
-                render={(error) => <Label basic color="red" content={error} />}
-              />
-            </FormField>
-
-            <Field placeholder="Description" name="description" />
-            <Field placeholder="Category" name="category" />
-            <Field placeholder="Date" type="date" name="date" />
-            <Field placeholder="City" name="city" />
-            <Field placeholder="Venue" name="venue" />
+            <CustomTextInput placeholder="Title" name="title" />
+            <CustomTextArea
+              placeholder="Description"
+              name="description"
+              rows={3}
+            />
+            <CustomSelect
+              placeholder="Category"
+              name="category"
+              options={categoryOptions}
+            />
+            <CustomDatePicker
+              placeholderText="Date"
+              showTimeSelect
+              timeCaption="time"
+              name="date"
+              dateFormat="MMMM d,yyyy h:mm aa"
+            />
+            <CustomTextInput placeholder="City" name="city" />
+            <CustomTextInput placeholder="Venue" name="venue" />
             <Button
               floated="right"
               positive

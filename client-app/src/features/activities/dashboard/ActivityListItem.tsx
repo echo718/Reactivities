@@ -3,6 +3,7 @@ import { Activity } from "../../../app/models/activity";
 import { useStore } from "../../../app/stores/store";
 import { SyntheticEvent, useState } from "react";
 import { Link } from "react-router-dom";
+import { format } from "date-fns";
 
 interface Props {
   activity: Activity;
@@ -39,7 +40,7 @@ export const ActivityListItem = ({ activity }: Props) => {
       <Segment>
         <span>
           <Icon name="clock" />
-          {activity.date}
+          {format(activity.date!, "dd MMM yyyy h:mm aa")}
           <Icon name="marker" />
           {activity.venue}
         </span>
