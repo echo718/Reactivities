@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EO7o7kWAtPcRB+DZIYzt1Ti54CxxoxS5ot72V2gqyPUltieDS13Z0TjdryN0dydggtGkVx5v9o4TyCaRlGAkew==",
+  "dgSpecHash": "PRuuP0SS+44=",
   "success": true,
-  "projectFilePath": "D:\\udemy\\activity\\Reactivities\\Persistence\\Persistence.csproj",
+  "projectFilePath": "D:\\vscodeFolder\\reactivities\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sunto\\.nuget\\packages\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
     "C:\\Users\\sunto\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

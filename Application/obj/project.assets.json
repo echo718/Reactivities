@@ -3551,32 +3551,30 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\udemy\\activity\\Reactivities\\Application\\Application.csproj",
+      "projectUniqueName": "D:\\vscodeFolder\\reactivities\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "D:\\udemy\\activity\\Reactivities\\Application\\Application.csproj",
+      "projectPath": "D:\\vscodeFolder\\reactivities\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\sunto\\.nuget\\packages\\",
-      "outputPath": "D:\\udemy\\activity\\Reactivities\\Application\\obj\\",
+      "outputPath": "D:\\vscodeFolder\\reactivities\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sunto\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\sunto\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\udemy\\activity\\Reactivities\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\udemy\\activity\\Reactivities\\Domain\\Domain.csproj"
+            "D:\\vscodeFolder\\reactivities\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\vscodeFolder\\reactivities\\Domain\\Domain.csproj"
             },
-            "D:\\udemy\\activity\\Reactivities\\Persistence\\Persistence.csproj": {
-              "projectPath": "D:\\udemy\\activity\\Reactivities\\Persistence\\Persistence.csproj"
+            "D:\\vscodeFolder\\reactivities\\Persistence\\Persistence.csproj": {
+              "projectPath": "D:\\vscodeFolder\\reactivities\\Persistence\\Persistence.csproj"
             }
           }
         }
@@ -3585,6 +3583,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3620,7 +3623,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

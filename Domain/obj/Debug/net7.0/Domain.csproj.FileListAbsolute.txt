@@ -10,3 +10,16 @@ D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\Domain.dll
 D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\refint\Domain.dll
 D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\Domain.pdb
 D:\udemy\activity\Reactivities\Domain\obj\Debug\net7.0\ref\Domain.dll
+D:\vscodeFolder\reactivities\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\vscodeFolder\reactivities\Domain\bin\Debug\net7.0\Domain.dll
+D:\vscodeFolder\reactivities\Domain\bin\Debug\net7.0\Domain.pdb
+D:\vscodeFolder\reactivities\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\vscodeFolder\reactivities\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\vscodeFolder\reactivities\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\vscodeFolder\reactivities\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\vscodeFolder\reactivities\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\vscodeFolder\reactivities\Domain\obj\Debug\net7.0\Domain.sourcelink.json
+D:\vscodeFolder\reactivities\Domain\obj\Debug\net7.0\Domain.dll
+D:\vscodeFolder\reactivities\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\vscodeFolder\reactivities\Domain\obj\Debug\net7.0\Domain.pdb
+D:\vscodeFolder\reactivities\Domain\obj\Debug\net7.0\ref\Domain.dll

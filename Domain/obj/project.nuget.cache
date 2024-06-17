@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HiF25glYuxtYIETRc/+gyU4n6WzJ3Sj7Eerye+T6CKkT1pU0fTK2HwAWoo7oAtvg5L13WSAfIncBzD/1MKBTsw==",
+  "dgSpecHash": "rcKolNGc5pU=",
   "success": true,
-  "projectFilePath": "D:\\udemy\\activity\\Reactivities\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\vscodeFolder\\reactivities\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sunto\\.nuget\\packages\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
     "C:\\Users\\sunto\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

@@ -4145,30 +4145,27 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\udemy\\activity\\Reactivities\\API\\API.csproj",
+      "projectUniqueName": "D:\\vscodeFolder\\Reactivities\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\udemy\\activity\\Reactivities\\API\\API.csproj",
+      "projectPath": "D:\\vscodeFolder\\Reactivities\\API\\API.csproj",
       "packagesPath": "C:\\Users\\sunto\\.nuget\\packages\\",
-      "outputPath": "D:\\udemy\\activity\\Reactivities\\API\\obj\\",
+      "outputPath": "D:\\vscodeFolder\\Reactivities\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sunto\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\sunto\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\udemy\\activity\\Reactivities\\Application\\Application.csproj": {
-              "projectPath": "D:\\udemy\\activity\\Reactivities\\Application\\Application.csproj"
+            "D:\\vscodeFolder\\reactivities\\Application\\Application.csproj": {
+              "projectPath": "D:\\vscodeFolder\\reactivities\\Application\\Application.csproj"
             }
           }
         }
@@ -4177,6 +4174,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -4221,7 +4223,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
