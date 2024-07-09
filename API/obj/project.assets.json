@@ -4145,11 +4145,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\vscodeFolder\\Reactivities\\API\\API.csproj",
+      "projectUniqueName": "D:\\vscodeFolder\\reactivities\\api\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\vscodeFolder\\Reactivities\\API\\API.csproj",
+      "projectPath": "D:\\vscodeFolder\\reactivities\\api\\API.csproj",
       "packagesPath": "C:\\Users\\sunto\\.nuget\\packages\\",
-      "outputPath": "D:\\vscodeFolder\\Reactivities\\API\\obj\\",
+      "outputPath": "D:\\vscodeFolder\\reactivities\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sunto\\AppData\\Roaming\\NuGet\\NuGet.Config"
