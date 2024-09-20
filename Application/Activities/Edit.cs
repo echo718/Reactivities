@@ -1,5 +1,6 @@
 using AutoMapper;
 using Domain;
+using FluentValidation;
 using MediatR;
 using Persistence;
 
@@ -12,13 +13,13 @@ namespace Application.Activities
             public Activity Activity { get; set; }
         }
 
-        // public class CommandValidator : AbstractValidator<Command>
-        // {
-        //     public CommandValidator()
-        //     {
-        //         RuleFor(x => x.Activity).SetValidator(new ActivityValidator());
-        //     }
-        // }
+        public class CommandValidator : AbstractValidator<Command>
+        {
+            public CommandValidator()
+            {
+                RuleFor(x => x.Activity).SetValidator(new ActivityValidator());
+            }
+        }
 
         public class Handler : IRequestHandler<Command>
         {
@@ -35,7 +36,7 @@ namespace Application.Activities
                 var activity = await _context.Activities.FindAsync(request.Activity.Id);
 
                 activity.Title = request.Activity.Title ?? activity.Title;
-              
+
 
                 // if (activity == null) return null;
 

@@ -271,3 +271,6 @@ D:\vscodeFolder\Reactivities1\api\obj\Debug\net8.0\API.genruntimeconfig.cache
 D:\vscodeFolder\Reactivities1\api\obj\Debug\net8.0\ref\API.dll
 D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\AutoMapper.dll
 D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\FluentValidation.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
