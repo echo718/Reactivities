@@ -34,6 +34,7 @@ export default class ActivityStore {
         this.setLoadingInitial(true);
         try {
             const activities = await agent.Activities.list();
+            console.log(activities);
             runInAction(() => {
                 this.activityRegistry = new Map<string, Activity>();
                 activities.forEach((activity) => {

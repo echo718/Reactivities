@@ -1,4 +1,7 @@
 using API.Extensions;
+using API.Middleware;
+using Domain;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
@@ -8,8 +11,25 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddIdentityServices(builder.Configuration);
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(MyAllowSpecificOrigins,
+                          policy =>
+                          {
+                              policy.WithOrigins("http://localhost:3000")
+                                                  .AllowAnyHeader()
+                                                  .AllowAnyMethod();
+                          });
+});
+
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -18,9 +38,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
+
 
 app.UseAuthorization();
+app.UseCors(MyAllowSpecificOrigins);
 
 app.MapControllers();
 
@@ -29,10 +51,11 @@ var services = Scope.ServiceProvider;
 
 try
 {
+    Console.Write("PROGRAM start");
     var context = services.GetRequiredService<DataContext>();
-    // var userManager = services.GetRequiredService<UserManager<AppUser>>();
+    var userManager = services.GetRequiredService<UserManager<AppUser>>();
     await context.Database.MigrateAsync();
-    await Seed.SeedData(context);
+    await Seed.SeedData(context, userManager);
 }
 catch (Exception Ex)
 {

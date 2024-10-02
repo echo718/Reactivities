@@ -5,10 +5,13 @@ interface Props {
 }
 
 export const ValidationError = ({ errors }: Props) => {
+  console.log('errors',errors);
   return (
     <Message error>
+      
       {errors && (
         <Message.List>
+       
           {errors.map((err: string, index) => (
             <Message.Item key={index}>{err}</Message.Item>
           ))}
