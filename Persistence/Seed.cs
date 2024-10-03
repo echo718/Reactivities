@@ -9,7 +9,7 @@ namespace Persistence
         {
             Console.Write("SEED DATA start");
 
-            if (!userManager.Users.Any() && !context.Activities.Any())
+            if (!userManager.Users.Any())
             {
                 var users = new List<AppUser>
                 {

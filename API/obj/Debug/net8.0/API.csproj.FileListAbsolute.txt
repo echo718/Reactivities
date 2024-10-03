@@ -280,3 +280,12 @@ D:\vscodeFolder\Reactivities1\API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity
 D:\vscodeFolder\Reactivities1\API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
 D:\vscodeFolder\Reactivities1\API\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
 D:\vscodeFolder\Reactivities1\API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
