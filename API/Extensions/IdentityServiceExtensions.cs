@@ -2,6 +2,7 @@ using System.Text;
 using API.Service;
 using Domain;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using Microsoft.IdentityModel.Tokens;
 using Persistence;
 
@@ -15,10 +16,12 @@ namespace API.Extensions
                       {
                           opt.Password.RequireNonAlphanumeric = false;
                           opt.Password.RequireDigit = false; //Just add this part
+                          //opt.User.RequireUniqueEmail = true;
+
                       })
                       .AddEntityFrameworkStores<DataContext>();
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Super secret key Super secret key Super secret key"));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
             {
