@@ -47,12 +47,14 @@ namespace API.Controllers
         {
             if (await _userManager.Users.AnyAsync(x => x.UserName.ToLower() == registerDto.UserName.ToLower()))
             {
-                return BadRequest(" Username already exist");
+                ModelState.AddModelError("userName", "userName taken");
+                return ValidationProblem();
             }
 
             if (await _userManager.Users.AnyAsync(x => x.Email.ToLower() == registerDto.Email.ToLower()))
             {
-                return BadRequest(" Email already exist");
+                ModelState.AddModelError("email", "email taken");
+                return ValidationProblem();
             }
 
             var user = new AppUser

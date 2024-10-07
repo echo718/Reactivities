@@ -13,7 +13,7 @@ export const CustomTextInput = (props: TextInputProps) => {
   return (
     <Form.Field error={meta.touched && !!meta.error}>
       <label>{props.label}</label>
-      <input {...field} {...props} />
+      <input {...field} {...props} value={field.value || ""} />
       {meta.touched && meta.error ? (
         <Label basic color="red">
           {meta.error}
