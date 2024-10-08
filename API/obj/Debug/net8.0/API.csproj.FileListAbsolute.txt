@@ -289,3 +289,5 @@ D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\System.IdentityModel.Tokens.J
 D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Infrastructure.dll
+D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Infrastructure.pdb
