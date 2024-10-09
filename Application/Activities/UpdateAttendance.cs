@@ -1,5 +1,7 @@
 using Application.Core;
 using Application.Interfaces;
+using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
@@ -21,7 +23,6 @@ namespace Application.Activities
             {
                 _context = context;
                 _userAccessor = userAccessor;
-
             }
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
@@ -49,7 +50,7 @@ namespace Application.Activities
 
                 if (attendance == null)
                 {
-                    attendance = new Domain.ActivityAtendee
+                    attendance = new Domain.ActivityAttendee
                     {
                         AppUser = user,
                         Activity = activity,

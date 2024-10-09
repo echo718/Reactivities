@@ -1,6 +1,7 @@
 using Application.Activities;
 using Domain;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Update.Internal;
 
@@ -24,7 +25,7 @@ namespace API.Controllers
         [HttpGet("{id}")] //api/activities/jkljk
         public async Task<ActionResult<Activity>> GetActivity(Guid id)
         {
-            var result = await Mediator.Send(new Application.Activities.Details.Query { Id = id });
+            var result = await Mediator.Send(new Details.Query { Id = id });
 
             return HandleResult(result);
         }
@@ -36,6 +37,7 @@ namespace API.Controllers
             return HandleResult(await Mediator.Send(new Application.Activities.Create.Command { Activity = activity }));
         }
 
+        [Authorize(Policy = "IsActivityHost")]
         [HttpPut("{id}")]
         public async Task<IActionResult> EditActivity(Guid id, Activity activity)
         {
@@ -45,6 +47,7 @@ namespace API.Controllers
             return HandleResult(await Mediator.Send(new Application.Activities.Edit.Command { Activity = activity }));
         }
 
+        [Authorize(Policy = "IsActivityHost")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteActivity(Guid id)
         {
@@ -52,7 +55,7 @@ namespace API.Controllers
             return HandleResult(await Mediator.Send(new Application.Activities.Delete.Command { Id = id }));
         }
 
-        [HttpPost("{id}/sttend")]
+        [HttpPost("{id}/attend")]
         public async Task<IActionResult> Attend(Guid id)
         {
 

@@ -35,8 +35,8 @@ namespace Persistence.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("IsCancelled")
-                        .HasColumnType("TEXT");
+                    b.Property<bool>("IsCancelled")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Title")
                         .HasColumnType("TEXT");
@@ -49,7 +49,7 @@ namespace Persistence.Migrations
                     b.ToTable("Activities");
                 });
 
-            modelBuilder.Entity("Domain.ActivityAtendee", b =>
+            modelBuilder.Entity("Domain.ActivityAttendee", b =>
                 {
                     b.Property<string>("AppUserId")
                         .HasColumnType("TEXT");
@@ -64,7 +64,7 @@ namespace Persistence.Migrations
 
                     b.HasIndex("ActivityId");
 
-                    b.ToTable("ActivityAtendees");
+                    b.ToTable("ActivityAttendees");
                 });
 
             modelBuilder.Entity("Domain.AppUser", b =>
@@ -265,7 +265,7 @@ namespace Persistence.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Domain.ActivityAtendee", b =>
+            modelBuilder.Entity("Domain.ActivityAttendee", b =>
                 {
                     b.HasOne("Domain.Activity", "Activity")
                         .WithMany("Attendees")
