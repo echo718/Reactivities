@@ -1,13 +1,13 @@
 export interface User {
-    username: number;
-    displayName: string;
-    token: string;
-    image?:string;
+  username: string;
+  displayName: string;
+  token: string;
+  image?: string;
 }
 
 export interface UserFormValues {
-    email: string;
-    password:string;
-    username?: number;
-    displayName?: string; 
+  email: string;
+  password: string;
+  username?: number;
+  displayName?: string;
 }

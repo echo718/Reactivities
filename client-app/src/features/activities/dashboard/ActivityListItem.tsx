@@ -1,18 +1,31 @@
-import { Button, Icon, Item, Label, Segment } from "semantic-ui-react";
+import {
+  Button,
+  Icon,
+  Item,
+  Label,
+  Segment,
+} from "semantic-ui-react";
 import { Activity } from "../../../app/models/activity";
 import { useStore } from "../../../app/stores/store";
-import { SyntheticEvent, useState } from "react";
+import {
+  SyntheticEvent,
+  useState,
+} from "react";
 import { Link } from "react-router-dom";
 import { format } from "date-fns";
+import { ActivityAttendees } from "./ActivityAttendees";
 
 interface Props {
   activity: Activity;
 }
 
-export const ActivityListItem = ({ activity }: Props) => {
+export const ActivityListItem = ({
+  activity,
+}: Props) => {
   const { activityStore } = useStore();
   const { loading } = activityStore;
-  const [target, setTarget] = useState("");
+  const [target, setTarget] =
+    useState("");
 
   const handleActivityDelete = (
     e: SyntheticEvent<HTMLButtonElement>,
@@ -27,12 +40,22 @@ export const ActivityListItem = ({ activity }: Props) => {
       <Segment>
         <Item.Group>
           <Item>
-            <Item.Image size="tiny" circular src="/assets/user.png" />
+            <Item.Image
+              size="tiny"
+              circular
+              src="/assets/user.png"
+            />
             <Item.Content>
-              <Item.Header as={Link} to={`/activities/${activity.id}`}>
+              <Item.Header
+                as={Link}
+                to={`/activities/${activity.id}`}
+              >
                 {activity.title}
               </Item.Header>
-              <Item.Description>Hosted by Echo</Item.Description>
+              <Item.Description>
+                Hosted by{" "}
+                {activity.hostUsername}
+              </Item.Description>
             </Item.Content>
           </Item>
         </Item.Group>
@@ -40,14 +63,31 @@ export const ActivityListItem = ({ activity }: Props) => {
       <Segment>
         <span>
           <Icon name="clock" />
-          {format(activity.date!, "dd MMM yyyy h:mm aa")}
+          {format(
+            activity.date!,
+            "dd MMM yyyy h:mm aa"
+          )}
+
           <Icon name="marker" />
           {activity.venue}
         </span>
       </Segment>
-      <Segment secondary>Attendees go here</Segment>
+      <Segment secondary>
+        {activity.attendees.length >
+        0 ? (
+          <ActivityAttendees
+            attendees={
+              activity.attendees
+            }
+          />
+        ) : (
+          "No attendee yet"
+        )}
+      </Segment>
       <Segment clearing>
-        <span>{activity.description}</span>
+        <span>
+          {activity.description}
+        </span>
         <Button
           as={Link}
           to={`/activities/${activity.id}`}
