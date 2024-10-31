@@ -291,3 +291,6 @@ D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.IdentityModel.Proto
 D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Infrastructure.dll
 D:\vscodeFolder\Reactivities1\api\bin\Debug\net8.0\Infrastructure.pdb
+D:\vscodeFolder\Reactivities1\API\bin\Debug\net8.0\CloudinaryDotNet.dll
+D:\vscodeFolder\Reactivities1\API\bin\Debug\net8.0\dotenv.net.dll
+D:\vscodeFolder\Reactivities1\API\bin\Debug\net8.0\Newtonsoft.Json.dll
