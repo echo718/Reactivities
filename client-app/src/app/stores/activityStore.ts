@@ -155,7 +155,7 @@ export default class ActivityStore {
         }
     };
 
-    cancelActivity = async (id: string) => {
+    updateActivityStatus = async (id: string) => {
         this.loading = true;
         try {
             await agent.Activities.cancel(id);

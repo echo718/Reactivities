@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import { Button, Header, Item, Segment, Image } from 'semantic-ui-react';
+import { Button, Header, Item, Segment, Image, Label } from 'semantic-ui-react';
 import { Activity } from '../../../app/models/activity';
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
@@ -43,11 +43,19 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
     return (
         <Segment.Group>
             <Segment basic attached="top" style={{ padding: '0' }}>
-                <Image
-                    src={`/assets/categoryImages/${activity.category?.toLowerCase()}.jpg`}
-                    fluid
-                    style={activityImageStyle}
-                />
+                <Segment raised>
+                    {activity.isCancelled && (
+                        <Label as="a" color="red" ribbon>
+                            Cancelled
+                        </Label>
+                    )}
+                    <Image
+                        src={`/assets/categoryImages/${activity.category?.toLowerCase()}.jpg`}
+                        //fluid
+                        style={activityImageStyle}
+                    />
+                </Segment>
+
                 <Segment style={activityImageTextStyle} basic>
                     <Item.Group>
                         <Item>
@@ -74,38 +82,52 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                     </Item.Group>
                 </Segment>
             </Segment>
-            <Segment clearing attached="bottom">
-                <Button
-                    color="teal"
-                    disabled={isExistInActivity(user?.userName)}
-                    onClick={() => {
-                        activityStore.attendActivity(activity.id);
-                        location.reload();
-                    }}
-                >
-                    Join Activity
-                </Button>
-                <Button
-                    disabled={!isExistInActivity(user?.userName)}
-                    onClick={() => {
-                        activityStore.cancelActivity(activity.id);
-                        location.reload();
-                    }}
-                >
-                    Cancel attendance
-                </Button>
-                {activity.hostUsername.toLocaleLowerCase() ===
-                    user?.displayName.toLocaleLowerCase() && (
+            {activity.isCancelled ? (
+                <Segment clearing attached="bottom">
                     <Button
-                        color="orange"
-                        floated="right"
-                        as={Link}
-                        to={`/manage/${activity.id}`}
+                        color="teal"
+                        onClick={() => {
+                            activityStore.updateActivityStatus(activity.id);
+                            location.reload();
+                        }}
                     >
-                        Manage Event
+                        Re-Activity activity
                     </Button>
-                )}
-            </Segment>
+                </Segment>
+            ) : (
+                <Segment clearing attached="bottom">
+                    <Button
+                        color="teal"
+                        disabled={isExistInActivity(user?.userName)}
+                        onClick={() => {
+                            activityStore.attendActivity(activity.id);
+                            location.reload();
+                        }}
+                    >
+                        Join Activity
+                    </Button>
+                    <Button
+                        disabled={!isExistInActivity(user?.userName)}
+                        onClick={() => {
+                            activityStore.updateActivityStatus(activity.id);
+                            location.reload();
+                        }}
+                    >
+                        Cancel attendance
+                    </Button>
+                    {activity.hostUsername.toLocaleLowerCase() ===
+                        user?.displayName.toLocaleLowerCase() && (
+                        <Button
+                            color="orange"
+                            floated="right"
+                            as={Link}
+                            to={`/manage/${activity.id}`}
+                        >
+                            Manage Event
+                        </Button>
+                    )}
+                </Segment>
+            )}
         </Segment.Group>
     );
 });

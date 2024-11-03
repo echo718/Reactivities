@@ -1,4 +1,4 @@
-import { Header } from 'semantic-ui-react';
+import { Header, Message } from 'semantic-ui-react';
 import { useStore } from '../../../app/stores/store';
 import { observer } from 'mobx-react-lite';
 import { ActivityListItem } from './ActivityListItem';
@@ -15,17 +15,15 @@ export const ActivityList = observer(() => {
                     <Fragment key={group}>
                         {activities.map((activity) => {
                             return (
-                                !activity.isCancelled && (
-                                    <Fragment key={group}>
-                                        <Header sub color="teal">
-                                            {group}
-                                        </Header>
-                                        <ActivityListItem
-                                            activity={activity}
-                                            key={activity.id}
-                                        />
-                                    </Fragment>
-                                )
+                                <Fragment key={group}>
+                                    <Header sub color="teal">
+                                        {group}
+                                    </Header>
+                                    <ActivityListItem
+                                        activity={activity}
+                                        key={activity.id}
+                                    />
+                                </Fragment>
                             );
                         })}
                     </Fragment>

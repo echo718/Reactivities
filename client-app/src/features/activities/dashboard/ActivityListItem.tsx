@@ -1,4 +1,4 @@
-import { Button, Icon, Item, Label, Segment } from 'semantic-ui-react';
+import { Button, Icon, Item, Label, Message, Segment } from 'semantic-ui-react';
 import { Activity } from '../../../app/models/activity';
 import { useStore } from '../../../app/stores/store';
 import { SyntheticEvent, useState } from 'react';
@@ -25,6 +25,11 @@ export const ActivityListItem = ({ activity }: Props) => {
 
     return (
         <Segment.Group>
+            {activity.isCancelled && (
+                <Segment inverted color="red" textAlign="center">
+                    Cancelled
+                </Segment>
+            )}
             <Segment>
                 <Item.Group>
                     <Item>
