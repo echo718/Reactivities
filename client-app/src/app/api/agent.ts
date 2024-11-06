@@ -94,7 +94,13 @@ const Account = {
     register: (user: UserFormValues) => request.post('/account/register', user)
 };
 
+const Profile = {
+    get: (userName: string) => request.get<User>(`/profiles/${userName}`),
+    delete: (photoId: string) => request.delete<void>(`/photos/${photoId}`)
+};
+
 export const agent = {
     Activities,
-    Account
+    Account,
+    Profile
 };

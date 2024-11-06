@@ -11,3 +11,13 @@ export interface UserFormValues {
     username?: number;
     displayName?: string;
 }
+
+export interface Profile extends User {
+    photos: Photo[] | null;
+}
+
+export interface Photo {
+    id: string;
+    url: string;
+    isMain: boolean;
+}
