@@ -6,39 +6,37 @@ import {
     GridRow,
     Header,
     Item,
-    ItemContent,
-    ItemHeader,
     Segment,
-    Statistic,
-    StatisticGroup,
-    StatisticLabel,
-    StatisticValue
+    Statistic
 } from 'semantic-ui-react';
 import { useStore } from '../../app/stores/store';
 import { observer } from 'mobx-react-lite';
-import { useParams } from 'react-router-dom';
 import { LoadingComponent } from '../../app/layout/LoadingComponent';
 import { ProfileFilters } from './Content/ProfileFilters';
 import { useState } from 'react';
 import { About } from './Content/About';
-import { Photos } from './Content/Photos';
+import { Photos } from './Content/Photos/Photos';
 
 export const Profile = observer(() => {
-    const [activeItem, setActiveItem] = useState('About');
+    const [activeItem, setActiveItem] = useState<ProfileFilters>('About');
     const { activityStore } = useStore();
     const { loadingInitial } = activityStore;
-
-    const { id } = useParams();
     const { userStore } = useStore();
 
     if (loadingInitial) return <LoadingComponent />;
 
     const showFilteredContent = () => {
         switch (activeItem) {
-            case 'About':
+            case ProfileDic.About:
                 return <About />;
-            case 'Photos':
+            case ProfileDic.Photos:
                 return <Photos />;
+            case ProfileDic.Events:
+                return <div>events</div>;
+            case ProfileDic.Followers:
+                return <div>Followers</div>;
+            case ProfileDic.Followings:
+                return <div>Followings</div>;
         }
     };
 
@@ -59,7 +57,7 @@ export const Profile = observer(() => {
                                 />
                             </Item>
                         </GridColumn>
-                        <GridColumn width={8} fluid vertical>
+                        <GridColumn width={8}>
                             <Header as="h1">
                                 {userStore.user?.displayName}
                             </Header>
@@ -101,7 +99,7 @@ export const Profile = observer(() => {
                 <Grid.Column width="6">
                     <ProfileFilters
                         activeItem={activeItem}
-                        activeMenuItem={(activeMenuName: string) => {
+                        activeMenuItem={(activeMenuName: ProfileFilters) => {
                             setActiveItem(activeMenuName);
                         }}
                     />

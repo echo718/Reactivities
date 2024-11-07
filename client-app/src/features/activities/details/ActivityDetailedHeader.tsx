@@ -90,6 +90,10 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                             activityStore.updateActivityStatus(activity.id);
                             location.reload();
                         }}
+                        disabled={
+                            activity.hostUsername.toLocaleLowerCase() !==
+                            user?.displayName.toLocaleLowerCase()
+                        }
                     >
                         Re-Activity activity
                     </Button>

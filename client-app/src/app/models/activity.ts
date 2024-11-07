@@ -7,6 +7,7 @@ export interface Activity {
     city: string;
     venue: string;
     hostUsername: string;
+    hostUserImage?: string;
     isCancelled: boolean;
     attendees: Attendee[];
 }

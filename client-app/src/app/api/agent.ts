@@ -3,7 +3,7 @@ import { Activity } from '../models/activity';
 import { toast } from 'react-toastify';
 import { router } from '../router/Routers';
 import { store } from '../stores/store';
-import { User, UserFormValues } from '../models/user';
+import { Photo, User, UserFormValues } from '../models/user';
 
 const sleep = (delay: number) => {
     return new Promise((resolver) => {
@@ -96,7 +96,16 @@ const Account = {
 
 const Profile = {
     get: (userName: string) => request.get<User>(`/profiles/${userName}`),
-    delete: (photoId: string) => request.delete<void>(`/photos/${photoId}`)
+    delete: (photoId: string) => request.delete<void>(`/photos/${photoId}`),
+    setMain: (photoId: string) =>
+        request.post<void>(`/photos/${photoId}/setmain`, {}),
+    add: (file: any) => {
+        let formData = new FormData();
+        formData.append('File', file);
+        return axios.post<Photo>('/photos', formData, {
+            headers: { 'Content-Type': 'multipart/form-data' }
+        });
+    }
 };
 
 export const agent = {

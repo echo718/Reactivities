@@ -1,7 +1,6 @@
-import { useStore } from '../../../app/stores/store';
+import { useStore } from '../../../../app/stores/store';
 import { observer } from 'mobx-react-lite';
-import { useParams } from 'react-router-dom';
-import { LoadingComponent } from '../../../app/layout/LoadingComponent';
+import { LoadingComponent } from '../../../../app/layout/LoadingComponent';
 import {
     Button,
     Card,
@@ -11,23 +10,25 @@ import {
     GridColumn,
     Image
 } from 'semantic-ui-react';
-import { Photo } from '../../../app/models/user';
-import { useEffect, useState } from 'react';
+import { Photo } from '../../../../app/models/user';
+import { useEffect } from 'react';
+import { DropZone } from './DropZone';
 
 export const Photos = observer(() => {
     const { profileStore } = useStore();
-    const { loadingProfile, profile, loadPhotos, deletePhotos } = profileStore;
-    const [loading, setLoading] = useState(loadingProfile);
+    const { loadingProfile, profile, loadPhotos, deletePhotos, setMain } =
+        profileStore;
+    // const [loading, setLoading] = useState(loadingProfile);
 
     useEffect(() => {
         loadPhotos();
     }, []);
 
     useEffect(() => {
-        setLoading(loadingProfile);
+        //setLoading(loadingProfile);
     }, [loadingProfile]);
 
-    return loading ? (
+    return loadingProfile ? (
         <LoadingComponent />
     ) : (
         <Grid
@@ -52,7 +53,7 @@ export const Photos = observer(() => {
                 </span>
             </GridColumn>
             <GridColumn floated="right" width={4}>
-                <Button>Add Photo</Button>
+                <DropZone />
             </GridColumn>
             <CardGroup>
                 {profile?.photos?.length == 0
@@ -68,6 +69,10 @@ export const Photos = observer(() => {
                                           basic
                                           color="green"
                                           disabled={photo.isMain}
+                                          onClick={() => {
+                                              setMain(photo.id);
+                                              location.reload();
+                                          }}
                                       >
                                           Set to Main
                                       </Button>
