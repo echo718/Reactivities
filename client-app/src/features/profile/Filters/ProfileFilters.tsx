@@ -4,19 +4,17 @@ import {
     ProfileCategories,
     ProfileDic
 } from '../Functions/profileDics';
-import { useStore } from '../../../app/stores/store';
 
 interface ProfileFiltersProps {
     activeMenuItem: (activeMenuName: ProfileCategories) => void;
     activeItem: ProfileCategories;
+    hostDisplayName?: string;
 }
 
 export const ProfileFilters = (props: ProfileFiltersProps) => {
-    const { userStore } = useStore();
     const urlDirectors = location.pathname.split('/');
     const urlName = urlDirectors[urlDirectors.length - 1].toLocaleLowerCase();
-    const isHostProfile =
-        urlName === userStore.user?.displayName.toLocaleLowerCase();
+    const isHostProfile = urlName === props.hostDisplayName;
 
     const getProfileFilterSet = () => {
         if (isHostProfile) return ProfileFilterSet;

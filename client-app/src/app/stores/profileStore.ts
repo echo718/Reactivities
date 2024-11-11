@@ -1,10 +1,10 @@
 import { makeAutoObservable, runInAction } from 'mobx';
 import { agent } from '../api/agent';
 import { Profile } from '../models/user';
-import { store } from './store';
 
 export default class ProfileStore {
     profile: Profile | null = null;
+    profileImage: string | undefined = '';
     loadingProfile = false;
     loading = false;
 
@@ -77,6 +77,24 @@ export default class ProfileStore {
                         this.profile.image = returedPhoto.url;
                     }
                 }
+                this.loadingProfile = false;
+            });
+        } catch (error) {
+            console.log(error);
+            runInAction(() => {
+                this.loadingProfile = false;
+            });
+        }
+    };
+
+    getProfileImage = async (profileName: string) => {
+        this.loadingProfile = true;
+        try {
+            const userProfile: Profile = (await agent.Profile.get(
+                profileName
+            )) as Profile;
+            runInAction(() => {
+                this.profileImage = userProfile.image;
                 this.loadingProfile = false;
             });
         } catch (error) {

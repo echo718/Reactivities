@@ -1,6 +1,5 @@
 import { useStore } from '../../../../app/stores/store';
 import { observer } from 'mobx-react-lite';
-import { LoadingComponent } from '../../../../app/layout/LoadingComponent';
 import {
     Button,
     Card,
@@ -10,22 +9,14 @@ import {
     GridColumn,
     Image
 } from 'semantic-ui-react';
-import { Photo } from '../../../../app/models/user';
-import { useEffect } from 'react';
+import { Photo, Profile } from '../../../../app/models/user';
 import { DropZone } from './DropZone';
 
-export const Photos = observer(() => {
+export const Photos = observer((props: { profile: Profile | null }) => {
     const { profileStore } = useStore();
-    const { loadingProfile, profile, loadPhotos, deletePhotos, setMain } =
-        profileStore;
+    const { deletePhotos, setMain } = profileStore;
 
-    useEffect(() => {
-        loadPhotos();
-    }, []);
-
-    return loadingProfile ? (
-        <LoadingComponent />
-    ) : (
+    return (
         <Grid
             style={{
                 width: '100%',
@@ -51,36 +42,34 @@ export const Photos = observer(() => {
                 <DropZone />
             </GridColumn>
             <CardGroup>
-                {profile?.photos?.length == 0
-                    ? 'Add photo'
-                    : profile?.photos?.map((photo: Photo, index: number) => (
-                          <Card key={index}>
-                              <CardContent>
-                                  <Image src={photo.url} />
-                              </CardContent>
-                              <CardContent extra>
-                                  <div className="ui two buttons">
-                                      <Button
-                                          basic
-                                          color="green"
-                                          disabled={photo.isMain}
-                                          onClick={() => {
-                                              setMain(photo.id);
-                                              location.reload();
-                                          }}
-                                      >
-                                          Set to Main
-                                      </Button>
-                                      <Button
-                                          icon="trash"
-                                          basic
-                                          color="red"
-                                          onClick={() => deletePhotos(photo.id)}
-                                      ></Button>
-                                  </div>
-                              </CardContent>
-                          </Card>
-                      ))}
+                {props.profile?.photos?.map((photo: Photo, index: number) => (
+                    <Card key={index}>
+                        <CardContent>
+                            <Image src={photo.url} />
+                        </CardContent>
+                        <CardContent extra>
+                            <div className="ui two buttons">
+                                <Button
+                                    basic
+                                    color="green"
+                                    disabled={photo.isMain}
+                                    onClick={() => {
+                                        setMain(photo.id);
+                                        location.reload();
+                                    }}
+                                >
+                                    Set to Main
+                                </Button>
+                                <Button
+                                    icon="trash"
+                                    basic
+                                    color="red"
+                                    onClick={() => deletePhotos(photo.id)}
+                                ></Button>
+                            </div>
+                        </CardContent>
+                    </Card>
+                ))}
             </CardGroup>
         </Grid>
     );
