@@ -12,23 +12,31 @@ import {
 import { useStore } from '../../app/stores/store';
 import { observer } from 'mobx-react-lite';
 import { LoadingComponent } from '../../app/layout/LoadingComponent';
-import { ProfileFilters } from './Content/ProfileFilters';
-import { useState } from 'react';
-import { About } from './Content/About';
-import { Photos } from './Content/Photos/Photos';
+import { ProfileFilters } from './Filters/ProfileFilters';
+import { useEffect, useState } from 'react';
+import { Photos } from './Filters/Photos/Photos';
+import { ProfileDic, ProfileCategories } from './Functions/profileDics';
+import { getProfileImage } from './Functions/getProfileImage';
 
 export const Profile = observer(() => {
-    const [activeItem, setActiveItem] = useState<ProfileFilters>('About');
+    const urlDirectors = location.pathname.split('/');
+    const urlName = urlDirectors[urlDirectors.length - 1].toLocaleLowerCase();
+
+    const [profileName, setProfileName] = useState(urlName);
+    const [profileIamge, setProfileImage] = useState<string>();
+
+    const [activeItem, setActiveItem] = useState<ProfileCategories>(
+        ProfileDic.About as ProfileCategories
+    );
     const { activityStore } = useStore();
     const { loadingInitial } = activityStore;
-    const { userStore } = useStore();
 
     if (loadingInitial) return <LoadingComponent />;
 
     const showFilteredContent = () => {
         switch (activeItem) {
             case ProfileDic.About:
-                return <About />;
+                return <div>{profileName}</div>;
             case ProfileDic.Photos:
                 return <Photos />;
             case ProfileDic.Events:
@@ -40,6 +48,21 @@ export const Profile = observer(() => {
         }
     };
 
+    useEffect(() => {
+        const fetchProfileImage = async () => {
+            const imageUrl = await getProfileImage(profileName);
+            setProfileImage(imageUrl ?? '/assets/user.png');
+        };
+
+        fetchProfileImage();
+    }, []);
+
+    useEffect(() => {
+        const urlName =
+            urlDirectors[urlDirectors.length - 1].toLocaleLowerCase();
+        setProfileName(urlName);
+    }, [location]);
+
     return (
         <Segment.Group>
             <Segment>
@@ -50,17 +73,12 @@ export const Profile = observer(() => {
                                 <Item.Image
                                     size="large"
                                     circular
-                                    src={
-                                        userStore.user?.image ??
-                                        '/assets/user.png'
-                                    }
+                                    src={profileIamge}
                                 />
                             </Item>
                         </GridColumn>
                         <GridColumn width={8}>
-                            <Header as="h1">
-                                {userStore.user?.displayName}
-                            </Header>
+                            <Header as="h1">{profileName}</Header>
                         </GridColumn>
                         <Segment basic textAlign="center">
                             <Statistic
@@ -99,7 +117,7 @@ export const Profile = observer(() => {
                 <Grid.Column width="6">
                     <ProfileFilters
                         activeItem={activeItem}
-                        activeMenuItem={(activeMenuName: ProfileFilters) => {
+                        activeMenuItem={(activeMenuName) => {
                             setActiveItem(activeMenuName);
                         }}
                     />

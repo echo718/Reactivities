@@ -18,15 +18,10 @@ export const Photos = observer(() => {
     const { profileStore } = useStore();
     const { loadingProfile, profile, loadPhotos, deletePhotos, setMain } =
         profileStore;
-    // const [loading, setLoading] = useState(loadingProfile);
 
     useEffect(() => {
         loadPhotos();
     }, []);
-
-    useEffect(() => {
-        //setLoading(loadingProfile);
-    }, [loadingProfile]);
 
     return loadingProfile ? (
         <LoadingComponent />

@@ -67,7 +67,9 @@ export default observer(function ActivityDetailedSidebar({
                                 />
                                 <Item.Content verticalAlign="middle">
                                     <Item.Header as="h3">
-                                        <Link to={`#`}>
+                                        <Link
+                                            to={`/profile/${attendee.displayName}`}
+                                        >
                                             {attendee.displayName}
                                         </Link>
                                     </Item.Header>

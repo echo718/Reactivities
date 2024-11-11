@@ -1,4 +1,4 @@
-const ProfileDic = {
+export const ProfileDic: { [key in ProfileCategories]: string } = {
     About: 'About',
     Photos: 'Photos',
     Events: 'Events',
@@ -6,7 +6,7 @@ const ProfileDic = {
     Followings: 'Followings'
 };
 
-const ProfileFilterSet = [
+export const ProfileFilterSet = [
     ProfileDic.About,
     ProfileDic.Photos,
     ProfileDic.Events,
@@ -14,7 +14,7 @@ const ProfileFilterSet = [
     ProfileDic.Followings
 ];
 
-type ProfileFilters =
+export type ProfileCategories =
     | 'About'
     | 'Photos'
     | 'Events'

@@ -7,15 +7,16 @@ import { useStore } from '../../../../app/stores/store';
 export const DropZone = observer(() => {
     const { profileStore } = useStore();
     const { addPhoto } = profileStore;
+
     const onDrop = useCallback((acceptedFiles: object[]) => {
         acceptedFiles.forEach((file: any) => {
             Object.assign(file, {
                 preview: URL.createObjectURL(file)
             });
         });
-        console.log('acceptedFiles', acceptedFiles);
         addPhoto(acceptedFiles[0]);
     }, []);
+
     const { getRootProps, getInputProps, open } = useDropzone({
         noClick: true,
         onDrop
