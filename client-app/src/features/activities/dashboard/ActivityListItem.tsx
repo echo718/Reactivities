@@ -38,7 +38,7 @@ export const ActivityListItem = ({ activity }: Props) => {
                                 {activity.title}
                             </Item.Header>
                             <Item.Description>
-                                Hosted by {activity.hostUsername}
+                                Hosted by {activity.hostUserName}
                             </Item.Description>
                         </Item.Content>
                     </Item>

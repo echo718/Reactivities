@@ -45,7 +45,7 @@ export const ActivityDetails = observer(() => {
                 <Grid.Column width={6}>
                     <ActivityDetailedSidebar
                         attendees={activity.attendees}
-                        hostUsername={activity.hostUsername}
+                        hostUserName={activity.hostUserName}
                     />
                 </Grid.Column>
             </Grid>

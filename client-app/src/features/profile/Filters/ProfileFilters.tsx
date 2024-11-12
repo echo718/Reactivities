@@ -8,13 +8,13 @@ import {
 interface ProfileFiltersProps {
     activeMenuItem: (activeMenuName: ProfileCategories) => void;
     activeItem: ProfileCategories;
-    hostDisplayName?: string;
+    hostUserName?: string;
 }
 
 export const ProfileFilters = (props: ProfileFiltersProps) => {
     const urlDirectors = location.pathname.split('/');
     const urlName = urlDirectors[urlDirectors.length - 1].toLocaleLowerCase();
-    const isHostProfile = urlName === props.hostDisplayName;
+    const isHostProfile = urlName === props.hostUserName;
 
     const getProfileFilterSet = () => {
         if (isHostProfile) return ProfileFilterSet;

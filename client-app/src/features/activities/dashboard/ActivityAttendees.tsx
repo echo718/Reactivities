@@ -10,7 +10,7 @@ export const ActivityAttendees = ({ attendees }: Props) => {
     return (
         <List horizontal>
             {attendees.map((attendee: Attendee) => (
-                <ListItem key={attendee.username}>
+                <ListItem key={attendee.userName}>
                     <Popup
                         content={<AttendeeCard attendee={attendee} />}
                         trigger={

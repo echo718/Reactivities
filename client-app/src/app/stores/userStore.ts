@@ -46,4 +46,16 @@ export default class UserStore {
             console.log(err);
         }
     };
+
+    setImage = async (imageUrl: string | undefined) => {
+        try {
+            runInAction(() => {
+                if (this.user) {
+                    this.user.image = imageUrl;
+                }
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    };
 }

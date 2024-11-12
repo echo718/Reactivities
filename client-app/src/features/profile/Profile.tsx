@@ -16,10 +16,15 @@ import { ProfileFilters } from './Filters/ProfileFilters';
 import { useEffect, useState } from 'react';
 import { Photos } from './Filters/Photos/Photos';
 import { ProfileDic, ProfileCategories } from './Functions/profileDics';
+import { About } from './Filters/About/About';
 
 export const Profile = observer(() => {
     const urlDirectors = location.pathname.split('/');
-    const urlName = urlDirectors[urlDirectors.length - 1].toLocaleLowerCase();
+    const currentPageProfileUserName =
+        urlDirectors[urlDirectors.length - 1].toLocaleLowerCase();
+    const [isHostLogin, setIsHostLogin] = useState<boolean>(false);
+    const [currentProfileImageUrl, setCurrentProfileImageUrl] =
+        useState<string>();
 
     const [activeItem, setActiveItem] = useState<ProfileCategories>(
         ProfileDic.About as ProfileCategories
@@ -27,19 +32,30 @@ export const Profile = observer(() => {
     const { profileStore, userStore } = useStore();
     const {
         loadingProfile,
-        getProfileImage,
+        getUserProfileImage,
         profileImage,
-        loadPhotos,
-        profile
+        loadHostUserProfile,
+        profile,
+        hostUserProfile,
+        getBio,
+        bio,
+        loadCurrentPageUserProfile
     } = profileStore;
     const { getCurrentUser, user } = userStore;
 
     const showFilteredContent = () => {
         switch (activeItem) {
             case ProfileDic.About:
-                return <div>{urlName}</div>;
+                return (
+                    <About
+                        userName={currentPageProfileUserName}
+                        bio={bio}
+                        displayName={profile?.displayName}
+                        isHostLogin={isHostLogin}
+                    />
+                );
             case ProfileDic.Photos:
-                return <Photos profile={profile} />;
+                return <Photos profile={hostUserProfile} />;
             case ProfileDic.Events:
                 return <div>events</div>;
             case ProfileDic.Followers:
@@ -51,9 +67,22 @@ export const Profile = observer(() => {
 
     useEffect(() => {
         getCurrentUser();
-        getProfileImage(urlName);
-        loadPhotos();
+        loadHostUserProfile();
+        loadCurrentPageUserProfile(currentPageProfileUserName);
+        getUserProfileImage(currentPageProfileUserName);
+        getBio(currentPageProfileUserName);
     }, []);
+
+    useEffect(() => {
+        const isHost = user?.userName === currentPageProfileUserName;
+        const currentProfileImageUrlOnHost = hostUserProfile?.image;
+        const currentProfileImageUrlOnUser = profileImage;
+
+        setIsHostLogin(isHost);
+        setCurrentProfileImageUrl(
+            isHost ? currentProfileImageUrlOnHost : currentProfileImageUrlOnUser
+        );
+    }, [loadingProfile, user, hostUserProfile]);
 
     if (loadingProfile) return <LoadingComponent content="Loading profile" />;
 
@@ -67,12 +96,14 @@ export const Profile = observer(() => {
                                 <Item.Image
                                     size="large"
                                     circular
-                                    src={profileImage}
+                                    src={currentProfileImageUrl}
                                 />
                             </Item>
                         </GridColumn>
                         <GridColumn width={8}>
-                            <Header as="h1">{urlName}</Header>
+                            <Header as="h1">
+                                {currentPageProfileUserName}
+                            </Header>
                         </GridColumn>
                         <Segment basic textAlign="center">
                             <Statistic
@@ -114,7 +145,7 @@ export const Profile = observer(() => {
                         activeMenuItem={(activeMenuName) => {
                             setActiveItem(activeMenuName);
                         }}
-                        hostDisplayName={user?.displayName.toLocaleLowerCase()}
+                        hostUserName={user?.userName.toLocaleLowerCase()}
                     />
                 </Grid.Column>
             </Grid>

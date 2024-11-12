@@ -34,7 +34,7 @@ export const ActivityForm = observer(() => {
         category: '',
         city: '',
         venue: '',
-        hostUsername: '',
+        hostUserName: '',
         isCancelled: false,
         attendees: []
     });

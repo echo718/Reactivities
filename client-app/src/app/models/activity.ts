@@ -6,14 +6,14 @@ export interface Activity {
     category: string;
     city: string;
     venue: string;
-    hostUsername: string;
+    hostUserName: string;
     hostUserImage?: string;
     isCancelled: boolean;
     attendees: Attendee[];
 }
 
 export interface Attendee {
-    username: string;
+    userName: string;
     displayName: string;
     bio: string | null;
     image: string | null;

@@ -6,20 +6,19 @@ import { useStore } from '../../../app/stores/store';
 
 interface Props {
     attendees: Attendee[];
-    hostUsername: string;
+    hostUserName: string;
 }
 
 export default observer(function ActivityDetailedSidebar({
     attendees,
-    hostUsername
+    hostUserName
 }: Props) {
     const { userStore } = useStore();
     const attendeesCount = attendees.length;
 
     const sortedByDisplayNameAttendees = attendees.slice().sort((a, b) => {
-        if (hostUsername.toLowerCase() === a.displayName.toLowerCase())
-            return -2;
-        return a.displayName.localeCompare(b.displayName);
+        if (hostUserName.toLowerCase() === a.userName?.toLowerCase()) return -2;
+        return a.userName.localeCompare(b.userName);
     });
 
     return (
@@ -38,12 +37,12 @@ export default observer(function ActivityDetailedSidebar({
                 {sortedByDisplayNameAttendees.map((attendee) => {
                     const isActivityHost =
                         attendee.displayName.toLowerCase() ===
-                        hostUsername.toLowerCase();
+                        hostUserName.toLowerCase();
                     const isHostName =
                         userStore.user?.displayName === attendee.displayName;
 
                     return (
-                        <List relaxed divided key={attendee.username}>
+                        <List relaxed divided key={attendee.userName}>
                             <Item
                                 style={{
                                     position: 'relative'
@@ -68,7 +67,7 @@ export default observer(function ActivityDetailedSidebar({
                                 <Item.Content verticalAlign="middle">
                                     <Item.Header as="h3">
                                         <Link
-                                            to={`/profile/${attendee.displayName}`}
+                                            to={`/profile/${attendee.userName}`}
                                         >
                                             {attendee.displayName}
                                         </Link>

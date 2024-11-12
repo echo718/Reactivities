@@ -1,106 +1,156 @@
 import { makeAutoObservable, runInAction } from 'mobx';
 import { agent } from '../api/agent';
 import { Profile } from '../models/user';
+import { store } from './store';
 
 export default class ProfileStore {
     profile: Profile | null = null;
+    hostUserProfile: Profile | null = null;
     profileImage: string | undefined = '';
     loadingProfile = false;
     loading = false;
+    bio: string | undefined = undefined;
 
     constructor() {
         makeAutoObservable(this);
     }
 
-    loadPhotos = async () => {
-        this.loadingProfile = true;
+    setLoadingProfile = (state: boolean) => {
+        this.loadingProfile = state;
+    };
+
+    loadHostUserProfile = async () => {
+        this.setLoadingProfile(true);
         try {
-            const user = await agent.Account.current();
-            const userProfile: Profile = (await agent.Profile.get(
-                user.userName
+            const hostUser = await agent.Account.current();
+            const hostUserProfile: Profile = (await agent.Profile.get(
+                hostUser.userName
             )) as Profile;
 
             runInAction(() => {
-                this.profile = userProfile;
-                this.loadingProfile = false;
+                this.hostUserProfile = hostUserProfile;
+                store.userStore.setImage(hostUserProfile.image);
+                this.setLoadingProfile(false);
             });
         } catch (error) {
             console.log(error);
             runInAction(() => {
-                this.loadingProfile = false;
+                this.setLoadingProfile(false);
             });
         }
     };
 
     deletePhotos = async (photoId: string) => {
-        this.loadingProfile = true;
+        this.setLoadingProfile(true);
         try {
             await agent.Profile.delete(photoId);
-            await this.loadPhotos();
+            await this.loadHostUserProfile();
             runInAction(() => {
-                this.loadingProfile = false;
+                this.setLoadingProfile(false);
             });
         } catch (error) {
             console.log(error);
             runInAction(() => {
-                this.loadingProfile = false;
+                this.setLoadingProfile(false);
             });
         }
     };
 
     setMain = async (photoId: string) => {
-        this.loadingProfile = true;
+        this.setLoadingProfile(true);
         try {
             await agent.Profile.setMain(photoId);
-            await this.loadPhotos();
+            await this.loadHostUserProfile();
             runInAction(() => {
-                this.loadingProfile = false;
+                this.setLoadingProfile(false);
             });
         } catch (error) {
             console.log(error);
             runInAction(() => {
-                this.loadingProfile = false;
+                this.setLoadingProfile(false);
             });
         }
     };
 
+    //only host can add photo
     addPhoto = async (photo: object) => {
-        this.loadingProfile = true;
+        this.setLoadingProfile(true);
         try {
             const response = await agent.Profile.add(photo);
             const returedPhoto = response.data;
             runInAction(() => {
-                if (this.profile) {
-                    this.profile.photos?.push(returedPhoto);
+                if (this.hostUserProfile) {
+                    this.hostUserProfile.photos?.push(returedPhoto);
                     if (returedPhoto.isMain) {
-                        //  store.userStore.setImage(returedPhoto.url);
-                        this.profile.image = returedPhoto.url;
+                        //todo: judge is host to show in nav bar
+                        store.userStore.setImage(returedPhoto.url);
+                        this.hostUserProfile.image = returedPhoto.url;
+
+                        console.log('addPhoto', this.hostUserProfile.image);
                     }
                 }
-                this.loadingProfile = false;
+                this.setLoadingProfile(false);
             });
         } catch (error) {
             console.log(error);
             runInAction(() => {
-                this.loadingProfile = false;
+                this.setLoadingProfile(false);
             });
         }
     };
 
-    getProfileImage = async (profileName: string) => {
-        this.loadingProfile = true;
+    getUserProfileImage = async (profileName: string) => {
+        this.setLoadingProfile(true);
         try {
             const userProfile: Profile = (await agent.Profile.get(
                 profileName
             )) as Profile;
+
             runInAction(() => {
                 this.profileImage = userProfile.image;
-                this.loadingProfile = false;
+                this.setLoadingProfile(false);
             });
         } catch (error) {
             console.log(error);
             runInAction(() => {
-                this.loadingProfile = false;
+                this.setLoadingProfile(false);
+            });
+        }
+    };
+
+    getBio = async (userName: string) => {
+        this.setLoadingProfile(true);
+        try {
+            const userProfile: Profile = (await agent.Profile.get(
+                userName
+            )) as Profile;
+            runInAction(() => {
+                this.bio = userProfile.bio;
+                this.setLoadingProfile(false);
+            });
+        } catch (error) {
+            console.log(error);
+            runInAction(() => {
+                this.setLoadingProfile(false);
+            });
+        }
+    };
+
+    loadCurrentPageUserProfile = async (userName: string) => {
+        this.setLoadingProfile(true);
+        try {
+            const currentPageUserProfile: Profile = (await agent.Profile.get(
+                userName
+            )) as Profile;
+
+            runInAction(() => {
+                this.profile = currentPageUserProfile;
+                this.setLoadingProfile(false);
+            });
+        } catch (error) {
+            console.log(error);
+            runInAction(() => {
+                this.setLoadingProfile(false);
             });
         }
     };

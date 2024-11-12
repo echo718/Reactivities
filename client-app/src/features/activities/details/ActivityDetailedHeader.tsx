@@ -31,7 +31,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
     const isExistInActivity = (username?: string) => {
         const activityAttendeeUserNames: string[] = [];
         activity.attendees.map((attendee) => {
-            activityAttendeeUserNames.push(attendee.username);
+            activityAttendeeUserNames.push(attendee.userName);
         });
 
         if (username) {
@@ -75,7 +75,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                                 </p>
                                 <p>
                                     Hosted by{' '}
-                                    <strong>{activity.hostUsername}</strong>
+                                    <strong>{activity.hostUserName}</strong>
                                 </p>
                             </Item.Content>
                         </Item>
@@ -91,7 +91,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                             location.reload();
                         }}
                         disabled={
-                            activity.hostUsername.toLocaleLowerCase() !==
+                            activity.hostUserName.toLocaleLowerCase() !==
                             user?.displayName.toLocaleLowerCase()
                         }
                     >
@@ -119,7 +119,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                     >
                         Cancel attendance
                     </Button>
-                    {activity.hostUsername.toLocaleLowerCase() ===
+                    {activity.hostUserName.toLocaleLowerCase() ===
                         user?.displayName.toLocaleLowerCase() && (
                         <Button
                             color="orange"
