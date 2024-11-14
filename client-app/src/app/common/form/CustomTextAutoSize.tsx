@@ -1,20 +1,26 @@
 import { useField } from 'formik';
-import { Form, Label, TextArea } from 'semantic-ui-react';
+import { Form, Label } from 'semantic-ui-react';
+import TextareaAutosize from 'react-textarea-autosize';
 
-interface TextAreaProps {
+interface TextareaAutosizeProps {
     name: string;
-    placeholder: string;
-    rows?: number;
+    placeholder?: string;
     label?: string;
     type?: string;
+    minRows?: number;
 }
 
-export const CustomTextArea = (props: TextAreaProps) => {
+export const CustomTextareaAutosize = (props: TextareaAutosizeProps) => {
     const [field, meta] = useField(props.name);
     return (
         <Form.Field error={meta.touched && !!meta.error}>
             <label>{props.label}</label>
-            <TextArea {...field} {...props} style={{ minHeight: 100 }} />
+            <TextareaAutosize
+                {...field}
+                {...props}
+                value={field.value || ''}
+                minRows={props.minRows}
+            />
             {meta.touched && meta.error ? (
                 <Label basic color="red">
                     {meta.error}

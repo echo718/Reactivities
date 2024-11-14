@@ -1,8 +1,11 @@
-export interface User {
+export interface User extends BasicDetail {
     userName: string;
-    displayName: string;
     token: string;
     image?: string;
+}
+
+export interface BasicDetail {
+    displayName: string;
     bio?: string;
 }
 

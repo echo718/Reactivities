@@ -4,8 +4,14 @@ import {
     Grid,
     GridColumn,
     GridRow,
-    Header,
+    Image,
     Item,
+    List,
+    ListContent,
+    ListDescription,
+    ListHeader,
+    ListIcon,
+    ListItem,
     Segment,
     Statistic
 } from 'semantic-ui-react';
@@ -101,9 +107,38 @@ export const Profile = observer(() => {
                             </Item>
                         </GridColumn>
                         <GridColumn width={8}>
-                            <Header as="h1">
-                                {currentPageProfileUserName}
-                            </Header>
+                            {/* <Header as="h1">
+                                User Name: {currentPageProfileUserName}
+                                <br />
+                                Display Name: {profile?.displayName}
+                                <br />
+                            </Header> */}
+                            <List divided relaxed>
+                                <ListItem>
+                                    <ListContent>
+                                        <ListHeader>User Name</ListHeader>
+                                        <ListDescription>
+                                            {currentPageProfileUserName}
+                                        </ListDescription>
+                                    </ListContent>
+                                </ListItem>
+                                <ListItem>
+                                    <ListContent>
+                                        <ListHeader>Display Name</ListHeader>
+                                        <ListDescription>
+                                            {profile?.displayName}
+                                        </ListDescription>
+                                    </ListContent>
+                                </ListItem>
+                                <ListItem>
+                                    <ListContent>
+                                        <ListHeader>Description</ListHeader>
+                                        <ListDescription>
+                                            {profile?.bio}
+                                        </ListDescription>
+                                    </ListContent>
+                                </ListItem>
+                            </List>
                         </GridColumn>
                         <Segment basic textAlign="center">
                             <Statistic

@@ -1,27 +1,30 @@
-import { useStore } from '../../../../app/stores/store';
 import { observer } from 'mobx-react-lite';
 import { Button, Grid, GridColumn, Header, Image } from 'semantic-ui-react';
 import { LoadingComponent } from '../../../../app/layout/LoadingComponent';
 import { useEffect, useState } from 'react';
+import { UpdateProfileForm } from './UpdateProfileForm';
 
-export const About = observer(
-    (props: {
-        userName: string;
-        bio?: string;
-        displayName?: string;
-        isHostLogin: boolean;
-    }) => {
-        const { profileStore } = useStore();
-        const {} = profileStore;
-        const [displayName, setDisplayName] = useState(props.displayName);
-        const [isHostLogin, setIsHostLogin] = useState(props.isHostLogin);
+interface AboutProps {
+    userName: string;
+    bio?: string;
+    displayName?: string;
+    isHostLogin: boolean;
+}
 
-        useEffect(() => {
-            setDisplayName(props.displayName);
-            setIsHostLogin(props.isHostLogin);
-        }, [props.displayName, props.isHostLogin]);
+export const About = observer((props: AboutProps) => {
+    const [displayName, setDisplayName] = useState(props.displayName);
+    const [bio, setBio] = useState(props.bio);
+    const [isHostLogin, setIsHostLogin] = useState(props.isHostLogin);
+    const [showUpdateProfileForm, setShowUpdateProfileForm] = useState(false);
 
-        return displayName ? (
+    useEffect(() => {
+        setDisplayName(props.displayName);
+        setIsHostLogin(props.isHostLogin);
+        setBio(props.bio);
+    }, [props.displayName, props.isHostLogin, props.bio]);
+
+    return displayName ? (
+        <>
             <Grid
                 style={{
                     width: '100%',
@@ -40,12 +43,25 @@ export const About = observer(
                 </GridColumn>
                 {isHostLogin && (
                     <GridColumn floated="right" width={4}>
-                        <Button onClick={() => {}}>Update Profile</Button>
+                        <Button
+                            onClick={() => {
+                                setShowUpdateProfileForm(true);
+                            }}
+                        >
+                            Update Profile
+                        </Button>
                     </GridColumn>
                 )}
             </Grid>
-        ) : (
-            <LoadingComponent content="Loading profile" />
-        );
-    }
-);
+            {showUpdateProfileForm && (
+                <UpdateProfileForm
+                    displayName={displayName}
+                    bio={bio}
+                    onCancel={() => setShowUpdateProfileForm(false)}
+                />
+            )}
+        </>
+    ) : (
+        <LoadingComponent content="Loading profile" />
+    );
+});

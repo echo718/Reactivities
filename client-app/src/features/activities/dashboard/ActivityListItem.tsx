@@ -1,7 +1,5 @@
 import { Button, Icon, Item, Label, Message, Segment } from 'semantic-ui-react';
 import { Activity } from '../../../app/models/activity';
-import { useStore } from '../../../app/stores/store';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import { ActivityAttendees } from './ActivityAttendees';
@@ -11,10 +9,6 @@ interface Props {
 }
 
 export const ActivityListItem = ({ activity }: Props) => {
-    const { activityStore, userStore } = useStore();
-    const { loading } = activityStore;
-    const [target, setTarget] = useState('');
-
     return (
         <Segment.Group>
             {activity.isCancelled && (

@@ -1,7 +1,8 @@
 import { makeAutoObservable, runInAction } from 'mobx';
 import { agent } from '../api/agent';
-import { Profile } from '../models/user';
+import { BasicDetail, Profile } from '../models/user';
 import { store } from './store';
+import UserStore from './userStore';
 
 export default class ProfileStore {
     profile: Profile | null = null;
@@ -145,6 +146,29 @@ export default class ProfileStore {
 
             runInAction(() => {
                 this.profile = currentPageUserProfile;
+                this.setLoadingProfile(false);
+            });
+        } catch (error) {
+            console.log(error);
+            runInAction(() => {
+                this.setLoadingProfile(false);
+            });
+        }
+    };
+
+    updateProfileBasicDetails = async (basicDetails: BasicDetail) => {
+        this.setLoadingProfile(true);
+        try {
+            await agent.Profile.put(basicDetails);
+            const hostUser = await agent.Account.current();
+            store.userStore.user = hostUser;
+            const hostUserProfile: Profile = (await agent.Profile.get(
+                hostUser.userName
+            )) as Profile;
+            runInAction(() => {
+                this.hostUserProfile = hostUserProfile;
+                this.profile = hostUserProfile;
+                this.bio = hostUserProfile.bio;
                 this.setLoadingProfile(false);
             });
         } catch (error) {

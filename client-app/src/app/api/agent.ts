@@ -3,7 +3,7 @@ import { Activity } from '../models/activity';
 import { toast } from 'react-toastify';
 import { router } from '../router/Routers';
 import { store } from '../stores/store';
-import { Photo, User, UserFormValues } from '../models/user';
+import { BasicDetail, Photo, User, UserFormValues } from '../models/user';
 
 const sleep = (delay: number) => {
     return new Promise((resolver) => {
@@ -105,7 +105,8 @@ const Profile = {
         return axios.post<Photo>('/photos', formData, {
             headers: { 'Content-Type': 'multipart/form-data' }
         });
-    }
+    },
+    put: (profile: BasicDetail) => request.put<void>('/profiles', profile)
 };
 
 export const agent = {
