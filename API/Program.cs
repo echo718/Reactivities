@@ -1,6 +1,7 @@
 using System.Net;
 using API.Extensions;
 using API.Middleware;
+using API.SginalR;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -29,6 +30,7 @@ builder.Services.AddCors(options =>
                           {
                               policy.WithOrigins("http://localhost:3000")
                                                   .AllowAnyHeader()
+                                                  .AllowCredentials()
                                                   .AllowAnyMethod();
                           });
 });
@@ -53,6 +55,7 @@ app.UseAuthorization();
 app.UseCors(MyAllowSpecificOrigins);
 
 app.MapControllers();
+app.MapHub<ChatHub>("/chat");
 
 using var Scope = app.Services.CreateScope();
 var services = Scope.ServiceProvider;

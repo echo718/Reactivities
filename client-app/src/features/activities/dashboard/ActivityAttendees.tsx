@@ -13,7 +13,6 @@ export const ActivityAttendees = ({ attendees }: Props) => {
             {attendees.map((attendee: Attendee) => (
                 <ListItem key={attendee.userName}>
                     <Link to={`/profile/${attendee.userName}`}>
-                        {' '}
                         <Popup
                             content={<AttendeeCard attendee={attendee} />}
                             trigger={

@@ -22,6 +22,17 @@ namespace API.Extensions
                 opt.UseSqlite(config.GetConnectionString("DefaultConnectionString"));
             });
 
+            // services.AddCors(opt =>
+            // {
+            //     opt.AddPolicy("CorsPolicy", policy =>
+            //     {
+            //         policy.AllowAnyMethod()
+            //             .AllowAnyHeader()
+            //             .AllowCredentials()
+            //             .WithOrigins("http://localhost:3000");
+            //     });
+            // });
+
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Application.Activities.List.Handler).Assembly));
             services.AddAutoMapper(typeof(Application.Core.MappingProfiles).Assembly);
             services.AddFluentValidationAutoValidation();
@@ -30,6 +41,7 @@ namespace API.Extensions
             services.AddScoped<IUserAccessor, UserAccessor>();
             services.AddScoped<IPhotoAccessor, PhotoAccessor>();
             services.Configure<ClouinarySettings>(config.GetSection("Cloudinary"));
+            services.AddSignalR();
 
             return services;
         }
