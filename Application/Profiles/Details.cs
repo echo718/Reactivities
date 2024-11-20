@@ -15,7 +15,7 @@ namespace Application.Profiles
     {
         public class Query : IRequest<Result<Profile>>
         {
-            public string Username { get; set; }
+            public string UserName { get; set; }
         }
 
         public class handler : IRequestHandler<Query, Result<Profile>>
@@ -32,7 +32,7 @@ namespace Application.Profiles
             public async Task<Result<Profile>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var user = await _context.Users.ProjectTo<Profile>(_mapper.ConfigurationProvider)
-                                            .SingleOrDefaultAsync(x => x.UserName == request.Username);
+                                            .SingleOrDefaultAsync(x => x.UserName == request.UserName);
                 if (user == null) return null;
 
                 return Result<Profile>.Success(user);

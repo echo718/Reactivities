@@ -1,4 +1,5 @@
 import {
+    HttpTransportType,
     HubConnection,
     HubConnectionBuilder,
     LogLevel
@@ -21,7 +22,9 @@ export default class CommentStore {
                 .withUrl(
                     'http://localhost:5000/chat?activityId=' + activityId,
                     {
-                        accessTokenFactory: () => store.userStore.user?.token!
+                        accessTokenFactory: () => store.userStore.user?.token!,
+                        skipNegotiation: true,
+                        transport: HttpTransportType.WebSockets
                     }
                 )
                 .withAutomaticReconnect()
@@ -53,5 +56,14 @@ export default class CommentStore {
     clearComments = () => {
         this.comments = [];
         this.stopHubConnection();
+    };
+
+    addComment = async (values: { body: string; activityId?: string }) => {
+        values.activityId = store.activityStore.selectedActivity?.id;
+        try {
+            await this.hubConnection?.invoke('SendComment', values);
+        } catch (err) {
+            console.log(err);
+        }
     };
 }

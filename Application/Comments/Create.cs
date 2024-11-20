@@ -49,7 +49,7 @@ namespace Application.Comments
                 {
                     Author = user,
                     Activity = activity,
-                    Boday = request.Body
+                    Body = request.Body
                 };
 
                 activity.Comments.Add(comment);

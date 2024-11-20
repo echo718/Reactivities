@@ -22,7 +22,7 @@ namespace API.SginalR
             var comment = await _mediator.Send(command);
 
             await Clients.Group(command.ActivityId.ToString())
-                .SendAsync("ReceiveComment", comment.Value);
+                .SendAsync("ReceiveComments", comment.Value);
 
         }
 

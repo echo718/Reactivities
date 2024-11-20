@@ -9,7 +9,7 @@ namespace Domain
     {
         public int Id { get; set; }
 
-        public string Boday { get; set; }
+        public string Body { get; set; }
 
         public AppUser Author { get; set; }
 
