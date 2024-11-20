@@ -1,10 +1,11 @@
 import { observer } from 'mobx-react-lite';
 import { useEffect } from 'react';
-import { Segment, Header, Comment, Form, Button } from 'semantic-ui-react';
+import { Segment, Header, Comment, Form, Loader } from 'semantic-ui-react';
 import { useStore } from '../../../app/stores/store';
 import { Link } from 'react-router-dom';
-import { Formik } from 'formik';
-import { CustomTextArea } from '../../../app/common/form/CustomTextArea';
+import { Field, FieldProps, Formik } from 'formik';
+import * as yup from 'yup';
+import { formatDistanceToNow } from 'date-fns';
 
 interface Props {
     activityId: string;
@@ -12,16 +13,17 @@ interface Props {
 
 export default observer(function ActivityDetailedChat({ activityId }: Props) {
     const { commentStore } = useStore();
+    const { createHubConnection, clearComments } = commentStore;
 
     useEffect(() => {
         if (activityId) {
-            commentStore.createHubConnection(activityId);
+            createHubConnection(activityId);
         }
 
         return () => {
-            commentStore.clearComments();
+            clearComments();
         };
-    }, [commentStore, activityId]);
+    }, [createHubConnection, activityId]);
 
     return (
         <>
@@ -35,10 +37,54 @@ export default observer(function ActivityDetailedChat({ activityId }: Props) {
                 <Header>Chat about this event</Header>
             </Segment>
             <Segment attached clearing>
+                <Formik
+                    onSubmit={(values: any, { resetForm }) =>
+                        commentStore.addComment(values).then(() => {
+                            resetForm();
+                        })
+                    }
+                    initialValues={{ body: '' }}
+                    validationSchema={yup.object({
+                        body: yup.string().required()
+                    })}
+                >
+                    {({ isSubmitting, isValid, handleSubmit }) => (
+                        <Form className="ui form" onSubmit={handleSubmit}>
+                            <Field name="body">
+                                {(props: FieldProps) => (
+                                    <div style={{ position: 'relative' }}>
+                                        <Loader active={isSubmitting} />
+                                        <textarea
+                                            placeholder="Enter your comment (Enter to submit,SHIFT + ENTER FOR NEW LINE)"
+                                            rows={2}
+                                            {...props.field}
+                                            onKeyDown={(e) => {
+                                                if (
+                                                    e.key === 'Enter' &&
+                                                    e.shiftKey
+                                                ) {
+                                                    return;
+                                                }
+                                                if (
+                                                    e.key === 'Enter' &&
+                                                    !e.shiftKey
+                                                ) {
+                                                    e.preventDefault();
+                                                    isValid && handleSubmit();
+                                                }
+                                            }}
+                                        />
+                                    </div>
+                                )}
+                            </Field>
+                        </Form>
+                    )}
+                </Formik>
                 <Comment.Group>
                     {commentStore.comments.map((comment) => {
                         return (
                             <Comment key={comment.id}>
+                                {/* <Comment> */}
                                 <Comment.Avatar
                                     src={comment.image ?? '/assets/user.png'}
                                 />
@@ -51,46 +97,21 @@ export default observer(function ActivityDetailedChat({ activityId }: Props) {
                                     </Comment.Author>
                                     <Comment.Metadata>
                                         <div>
-                                            {comment.createdAt.toString()}
+                                            {formatDistanceToNow(
+                                                comment.createdAt
+                                            )}{' '}
+                                            ago
                                         </div>
                                     </Comment.Metadata>
-                                    <Comment.Text>{comment.body}</Comment.Text>
-                                    <Comment.Actions>
-                                        <Comment.Action>Reply</Comment.Action>
-                                    </Comment.Actions>
+                                    <Comment.Text
+                                        style={{ whiteSpace: 'pre-wrap' }}
+                                    >
+                                        {comment.body}
+                                    </Comment.Text>
                                 </Comment.Content>
                             </Comment>
                         );
                     })}
-
-                    <Formik
-                        onSubmit={(values: any, { resetForm }) =>
-                            commentStore
-                                .addComment(values)
-                                .then(() => resetForm())
-                        }
-                        initialValues={{ body: '' }}
-                    >
-                        {({ isSubmitting, isValid, handleSubmit }) => (
-                            <Form className="ui form" onSubmit={handleSubmit}>
-                                <CustomTextArea
-                                    placeholder="Add Comment"
-                                    name="body"
-                                    rows={2}
-                                />
-                                <Button
-                                    loading={isSubmitting}
-                                    disabled={isSubmitting || !isValid}
-                                    content="Add Reply"
-                                    labelPosition="left"
-                                    icon="edit"
-                                    primary
-                                    type="submit"
-                                    floated="right"
-                                />
-                            </Form>
-                        )}
-                    </Formik>
                 </Comment.Group>
             </Segment>
         </>

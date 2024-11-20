@@ -5,7 +5,7 @@ import { router } from '../router/Routers';
 import { store } from '../stores/store';
 import { BasicDetail, Photo, User, UserFormValues } from '../models/user';
 
-const sleep = (delay: number) => {
+export const sleep = (delay: number) => {
     return new Promise((resolver) => {
         setTimeout(resolver, delay);
     });

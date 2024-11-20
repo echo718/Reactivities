@@ -15,10 +15,12 @@ export const ActivityDetails = observer(() => {
         selectedActivity: activity,
         loadActivity,
         loadingInitial,
-        loadActivities
+        loadActivities,
+        clearSelectedActivity
     } = activityStore;
 
     const { id } = useParams();
+
     useEffect(() => {
         const fetchActivities = async () => {
             await loadActivities();
@@ -29,7 +31,9 @@ export const ActivityDetails = observer(() => {
                 if (id) loadActivity(id);
             })
             .catch(console.error);
-    }, [id]);
+
+        clearSelectedActivity();
+    }, [id, loadActivity, clearSelectedActivity]);
 
     if (loadingInitial || !activity) return <LoadingComponent />;
 
