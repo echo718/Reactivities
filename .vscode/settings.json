@@ -1,5 +1,6 @@
 {
-    "editor.wordWrapColumn": 50,
-    "editor.wordWrap": "off",
-    "editor.inlayHints.maximumLength": 30
+  "editor.wordWrapColumn": 50,
+  "editor.wordWrap": "off",
+  "editor.inlayHints.maximumLength": 30,
+  "editor.formatOnSave": true
 }

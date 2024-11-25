@@ -12,7 +12,7 @@ import ActivityDetailedSidebar from './ActivityDetailedSidebar';
 export const ActivityDetails = observer(() => {
     const { activityStore } = useStore();
     const {
-        selectedActivity: activity,
+        selectedActivity,
         loadActivity,
         loadingInitial,
         loadActivities,
@@ -35,21 +35,21 @@ export const ActivityDetails = observer(() => {
         clearSelectedActivity();
     }, [id, loadActivity, clearSelectedActivity]);
 
-    if (loadingInitial || !activity) return <LoadingComponent />;
+    if (loadingInitial || !selectedActivity) return <LoadingComponent />;
 
     return (
         <Grid>
             <Grid>
                 {' '}
                 <Grid.Column width={10}>
-                    <ActivityDetailedHeader activity={activity} />
-                    <ActivityDetailedInfo activity={activity} />
-                    <ActivityDetailedChat activityId={activity.id} />
+                    <ActivityDetailedHeader activity={selectedActivity} />
+                    <ActivityDetailedInfo activity={selectedActivity} />
+                    <ActivityDetailedChat activityId={selectedActivity.id} />
                 </Grid.Column>
                 <Grid.Column width={6}>
                     <ActivityDetailedSidebar
-                        attendees={activity.attendees}
-                        hostUserName={activity.hostUserName}
+                        attendees={selectedActivity.attendees}
+                        hostUserName={selectedActivity.hostUserName}
                     />
                 </Grid.Column>
             </Grid>

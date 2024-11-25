@@ -6941,11 +6941,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\vscodeFolder\\Reactivities1\\API\\API.csproj",
+      "projectUniqueName": "D:\\vscodeFolder\\Reactivities1\\api\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\vscodeFolder\\Reactivities1\\API\\API.csproj",
+      "projectPath": "D:\\vscodeFolder\\Reactivities1\\api\\API.csproj",
       "packagesPath": "C:\\Users\\sunto\\.nuget\\packages\\",
-      "outputPath": "D:\\vscodeFolder\\Reactivities1\\API\\obj\\",
+      "outputPath": "D:\\vscodeFolder\\Reactivities1\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sunto\\AppData\\Roaming\\NuGet\\NuGet.Config"

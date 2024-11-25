@@ -1,16 +1,15 @@
 import {
     Button,
+    ButtonContent,
     Divider,
     Grid,
     GridColumn,
     GridRow,
-    Image,
     Item,
     List,
     ListContent,
     ListDescription,
     ListHeader,
-    ListIcon,
     ListItem,
     Segment,
     Statistic
@@ -48,6 +47,7 @@ export const Profile = observer(() => {
         loadCurrentPageUserProfile
     } = profileStore;
     const { getCurrentUser, user } = userStore;
+    const [showFollow, setShowFollow] = useState(true);
 
     const showFilteredContent = () => {
         switch (activeItem) {
@@ -153,8 +153,27 @@ export const Profile = observer(() => {
                             />
                             <Divider section />
                             <div>
-                                <Button size="huge" color="teal" fluid>
-                                    Following
+                                <Button size="huge" color="teal" fluid animated>
+                                    <ButtonContent visible>
+                                        Following
+                                    </ButtonContent>
+                                    {showFollow ? (
+                                        <ButtonContent
+                                            hidden
+                                            color="green"
+                                            basic
+                                            onClick={() => setShowFollow(false)}
+                                        >
+                                            Follow
+                                        </ButtonContent>
+                                    ) : (
+                                        <ButtonContent
+                                            hidden
+                                            onClick={() => setShowFollow(true)}
+                                        >
+                                            unFollow
+                                        </ButtonContent>
+                                    )}
                                 </Button>
                             </div>
                         </Segment>
