@@ -106,7 +106,14 @@ const Profile = {
             headers: { 'Content-Type': 'multipart/form-data' }
         });
     },
-    put: (profile: BasicDetail) => request.put<void>('/profiles', profile)
+    put: (profile: BasicDetail) => request.put<void>('/profiles', profile),
+    getFollowings: (
+        currentPageProfileUserName: string,
+        followingType: string
+    ) =>
+        request.get<User>(
+            `/follow/${currentPageProfileUserName}?predicate=${followingType}`
+        )
 };
 
 export const agent = {

@@ -20,3 +20,8 @@ export type ProfileCategories =
     | 'Events'
     | 'Followers'
     | 'Followings';
+
+export const FollowingTypes = {
+    Followings: 'followings',
+    Followers: 'followers'
+};

@@ -1,4 +1,5 @@
 using Application.Core;
+using Application.Interfaces;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using MediatR;
@@ -18,10 +19,12 @@ namespace Application.Followers
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
-            public Handler(DataContext context, IMapper mapper)
+            private readonly IUserAccessor _userAccessor;
+            public Handler(DataContext context, IMapper mapper, IUserAccessor userAccessor)
             {
                 _context = context;
                 _mapper = mapper;
+                _userAccessor = userAccessor;
 
             }
             public async Task<Result<List<Profiles.Profile>>> Handle(Query request, CancellationToken cancellationToken)
@@ -33,13 +36,15 @@ namespace Application.Followers
                     case "followers":
                         profiles = await _context.UserFollowings.Where(x => x.Target.UserName == request.UserName)
                                         .Select(u => u.Observer)
-                                        .ProjectTo<Profiles.Profile>(_mapper.ConfigurationProvider)
+                                        .ProjectTo<Profiles.Profile>(_mapper.ConfigurationProvider,
+                                             new { currentUserName = _userAccessor.GetUsername() })
                                         .ToListAsync();
                         break;
                     case "followings":
                         profiles = await _context.UserFollowings.Where(x => x.Observer.UserName == request.UserName)
                                         .Select(u => u.Target)
-                                        .ProjectTo<Profiles.Profile>(_mapper.ConfigurationProvider)
+                                        .ProjectTo<Profiles.Profile>(_mapper.ConfigurationProvider,
+                                         new { currentUserName = _userAccessor.GetUsername() })
                                         .ToListAsync();
                         break;
 

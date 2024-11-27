@@ -2,7 +2,6 @@ import { makeAutoObservable, runInAction } from 'mobx';
 import { agent } from '../api/agent';
 import { BasicDetail, Profile } from '../models/user';
 import { store } from './store';
-import UserStore from './userStore';
 
 export default class ProfileStore {
     profile: Profile | null = null;
@@ -11,6 +10,7 @@ export default class ProfileStore {
     loadingProfile = false;
     loading = false;
     bio: string | undefined = undefined;
+    followings: Profile | undefined = undefined;
 
     constructor() {
         makeAutoObservable(this);
@@ -169,6 +169,30 @@ export default class ProfileStore {
                 this.hostUserProfile = hostUserProfile;
                 this.profile = hostUserProfile;
                 this.bio = hostUserProfile.bio;
+                this.setLoadingProfile(false);
+            });
+        } catch (error) {
+            console.log(error);
+            runInAction(() => {
+                this.setLoadingProfile(false);
+            });
+        }
+    };
+
+    getFollowings = async (
+        currentPageProfileUserName: string,
+        followingType: string
+    ) => {
+        this.setLoadingProfile(true);
+        try {
+            const followingsProfile: Profile =
+                (await agent.Profile.getFollowings(
+                    currentPageProfileUserName,
+                    followingType
+                )) as Profile;
+
+            runInAction(() => {
+                this.followings = followingsProfile;
                 this.setLoadingProfile(false);
             });
         } catch (error) {

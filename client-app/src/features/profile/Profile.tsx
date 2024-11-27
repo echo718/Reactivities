@@ -20,8 +20,13 @@ import { LoadingComponent } from '../../app/layout/LoadingComponent';
 import { ProfileFilters } from './Filters/ProfileFilters';
 import { useEffect, useState } from 'react';
 import { Photos } from './Filters/Photos/Photos';
-import { ProfileDic, ProfileCategories } from './Functions/profileDics';
+import {
+    ProfileDic,
+    ProfileCategories,
+    FollowingTypes
+} from './Functions/profileDics';
 import { About } from './Filters/About/About';
+import { Followings } from './Filters/Followings/Followings';
 
 export const Profile = observer(() => {
     const urlDirectors = location.pathname.split('/');
@@ -65,7 +70,12 @@ export const Profile = observer(() => {
             case ProfileDic.Events:
                 return <div>events</div>;
             case ProfileDic.Followers:
-                return <div>Followers</div>;
+                return (
+                    <Followings
+                        currentPageProfileUserName={currentPageProfileUserName}
+                        followingType={FollowingTypes.Followings}
+                    />
+                );
             case ProfileDic.Followings:
                 return <div>Followings</div>;
         }
@@ -90,7 +100,8 @@ export const Profile = observer(() => {
         );
     }, [loadingProfile, user, hostUserProfile]);
 
-    if (loadingProfile) return <LoadingComponent content="Loading profile" />;
+    if (loadingProfile || !currentProfileImageUrl)
+        return <LoadingComponent content="Loading profile" />;
 
     return (
         <Segment.Group>
@@ -107,12 +118,6 @@ export const Profile = observer(() => {
                             </Item>
                         </GridColumn>
                         <GridColumn width={8}>
-                            {/* <Header as="h1">
-                                User Name: {currentPageProfileUserName}
-                                <br />
-                                Display Name: {profile?.displayName}
-                                <br />
-                            </Header> */}
                             <List divided relaxed>
                                 <ListItem>
                                     <ListContent>
@@ -144,38 +149,52 @@ export const Profile = observer(() => {
                             <Statistic
                                 size="small"
                                 label="Followers"
-                                value="5"
+                                value={profile?.followersCount}
                             />
                             <Statistic
                                 size="small"
                                 label="Following"
-                                value="34"
+                                value={profile?.followingCount}
                             />
-                            <Divider section />
-                            <div>
-                                <Button size="huge" color="teal" fluid animated>
-                                    <ButtonContent visible>
-                                        Following
-                                    </ButtonContent>
-                                    {showFollow ? (
-                                        <ButtonContent
-                                            hidden
-                                            color="green"
-                                            basic
-                                            onClick={() => setShowFollow(false)}
+
+                            {profile?.userName != user?.userName && (
+                                <>
+                                    <Divider section />
+                                    <div>
+                                        <Button
+                                            size="huge"
+                                            color="teal"
+                                            fluid
+                                            animated
                                         >
-                                            Follow
-                                        </ButtonContent>
-                                    ) : (
-                                        <ButtonContent
-                                            hidden
-                                            onClick={() => setShowFollow(true)}
-                                        >
-                                            unFollow
-                                        </ButtonContent>
-                                    )}
-                                </Button>
-                            </div>
+                                            <ButtonContent visible>
+                                                Following
+                                            </ButtonContent>
+                                            {showFollow ? (
+                                                <ButtonContent
+                                                    hidden
+                                                    color="green"
+                                                    basic
+                                                    onClick={() =>
+                                                        setShowFollow(false)
+                                                    }
+                                                >
+                                                    Follow
+                                                </ButtonContent>
+                                            ) : (
+                                                <ButtonContent
+                                                    hidden
+                                                    onClick={() =>
+                                                        setShowFollow(true)
+                                                    }
+                                                >
+                                                    unFollow
+                                                </ButtonContent>
+                                            )}
+                                        </Button>
+                                    </div>
+                                </>
+                            )}
                         </Segment>
                     </GridRow>
                 </Grid>
