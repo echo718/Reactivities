@@ -1,7 +1,7 @@
 export interface User extends BasicDetail {
     userName: string;
     token: string;
-    image?: string;
+    image: string | null;
 }
 
 export interface BasicDetail {

@@ -1,40 +1,25 @@
-import {
-    Button,
-    ButtonContent,
-    Divider,
-    Grid,
-    GridColumn,
-    GridRow,
-    Item,
-    List,
-    ListContent,
-    ListDescription,
-    ListHeader,
-    ListItem,
-    Segment,
-    Statistic
-} from 'semantic-ui-react';
+import { Grid, Segment } from 'semantic-ui-react';
 import { useStore } from '../../app/stores/store';
 import { observer } from 'mobx-react-lite';
 import { LoadingComponent } from '../../app/layout/LoadingComponent';
 import { ProfileFilters } from './Filters/ProfileFilters';
 import { useEffect, useState } from 'react';
-import { Photos } from './Filters/Photos/Photos';
 import {
     ProfileDic,
     ProfileCategories,
     FollowingTypes
 } from './Functions/profileDics';
-import { About } from './Filters/About/About';
-import { Followings } from './Filters/Followings/Followings';
+import { Introduction } from './Sections/Introduction';
+import { showFilteredContent } from './Functions/showFilteredContent';
 
 export const Profile = observer(() => {
     const urlDirectors = location.pathname.split('/');
     const currentPageProfileUserName =
         urlDirectors[urlDirectors.length - 1].toLocaleLowerCase();
     const [isHostLogin, setIsHostLogin] = useState<boolean>(false);
-    const [currentProfileImageUrl, setCurrentProfileImageUrl] =
-        useState<string>();
+    const [currentProfileImageUrl, setCurrentProfileImageUrl] = useState<
+        string | null
+    >(null);
 
     const [activeItem, setActiveItem] = useState<ProfileCategories>(
         ProfileDic.About as ProfileCategories
@@ -49,37 +34,12 @@ export const Profile = observer(() => {
         hostUserProfile,
         getBio,
         bio,
-        loadCurrentPageUserProfile
+        loadCurrentPageUserProfile,
+        getFollows: getFollowings,
+        followings,
+        followers
     } = profileStore;
     const { getCurrentUser, user } = userStore;
-    const [showFollow, setShowFollow] = useState(true);
-
-    const showFilteredContent = () => {
-        switch (activeItem) {
-            case ProfileDic.About:
-                return (
-                    <About
-                        userName={currentPageProfileUserName}
-                        bio={bio}
-                        displayName={profile?.displayName}
-                        isHostLogin={isHostLogin}
-                    />
-                );
-            case ProfileDic.Photos:
-                return <Photos profile={hostUserProfile} />;
-            case ProfileDic.Events:
-                return <div>events</div>;
-            case ProfileDic.Followers:
-                return (
-                    <Followings
-                        currentPageProfileUserName={currentPageProfileUserName}
-                        followingType={FollowingTypes.Followings}
-                    />
-                );
-            case ProfileDic.Followings:
-                return <div>Followings</div>;
-        }
-    };
 
     useEffect(() => {
         getCurrentUser();
@@ -87,12 +47,15 @@ export const Profile = observer(() => {
         loadCurrentPageUserProfile(currentPageProfileUserName);
         getUserProfileImage(currentPageProfileUserName);
         getBio(currentPageProfileUserName);
+        getFollowings(currentPageProfileUserName, FollowingTypes.Followings);
+        getFollowings(currentPageProfileUserName, FollowingTypes.Followers);
     }, []);
 
     useEffect(() => {
         const isHost = user?.userName === currentPageProfileUserName;
-        const currentProfileImageUrlOnHost = hostUserProfile?.image;
-        const currentProfileImageUrlOnUser = profileImage;
+        const currentProfileImageUrlOnHost =
+            hostUserProfile?.image ?? '/assets/user.png';
+        const currentProfileImageUrlOnUser = profileImage ?? '/assets/user.png';
 
         setIsHostLogin(isHost);
         setCurrentProfileImageUrl(
@@ -105,111 +68,31 @@ export const Profile = observer(() => {
 
     return (
         <Segment.Group>
-            <Segment>
-                <Grid divided="vertically">
-                    <GridRow columns={4}>
-                        <GridColumn>
-                            <Item>
-                                <Item.Image
-                                    size="large"
-                                    circular
-                                    src={currentProfileImageUrl}
-                                />
-                            </Item>
-                        </GridColumn>
-                        <GridColumn width={8}>
-                            <List divided relaxed>
-                                <ListItem>
-                                    <ListContent>
-                                        <ListHeader>User Name</ListHeader>
-                                        <ListDescription>
-                                            {currentPageProfileUserName}
-                                        </ListDescription>
-                                    </ListContent>
-                                </ListItem>
-                                <ListItem>
-                                    <ListContent>
-                                        <ListHeader>Display Name</ListHeader>
-                                        <ListDescription>
-                                            {profile?.displayName}
-                                        </ListDescription>
-                                    </ListContent>
-                                </ListItem>
-                                <ListItem>
-                                    <ListContent>
-                                        <ListHeader>Description</ListHeader>
-                                        <ListDescription>
-                                            {profile?.bio}
-                                        </ListDescription>
-                                    </ListContent>
-                                </ListItem>
-                            </List>
-                        </GridColumn>
-                        <Segment basic textAlign="center">
-                            <Statistic
-                                size="small"
-                                label="Followers"
-                                value={profile?.followersCount}
-                            />
-                            <Statistic
-                                size="small"
-                                label="Following"
-                                value={profile?.followingCount}
-                            />
-
-                            {profile?.userName != user?.userName && (
-                                <>
-                                    <Divider section />
-                                    <div>
-                                        <Button
-                                            size="huge"
-                                            color="teal"
-                                            fluid
-                                            animated
-                                        >
-                                            <ButtonContent visible>
-                                                Following
-                                            </ButtonContent>
-                                            {showFollow ? (
-                                                <ButtonContent
-                                                    hidden
-                                                    color="green"
-                                                    basic
-                                                    onClick={() =>
-                                                        setShowFollow(false)
-                                                    }
-                                                >
-                                                    Follow
-                                                </ButtonContent>
-                                            ) : (
-                                                <ButtonContent
-                                                    hidden
-                                                    onClick={() =>
-                                                        setShowFollow(true)
-                                                    }
-                                                >
-                                                    unFollow
-                                                </ButtonContent>
-                                            )}
-                                        </Button>
-                                    </div>
-                                </>
-                            )}
-                        </Segment>
-                    </GridRow>
-                </Grid>
-            </Segment>
+            <Introduction
+                currentProfileImageUrl={currentProfileImageUrl}
+                currentPageProfileUserName={currentPageProfileUserName}
+                profile={profile}
+                user={user}
+            />
             <Grid>
                 <Grid.Column width="10">
                     <Segment
                         style={{
                             width: '100%',
-                            marginTop: '4%',
-                            minHeight: '260px'
+                            marginTop: '4%'
+                            //minHeight: '260px'
                         }}
                     >
-                        {' '}
-                        {showFilteredContent()}
+                        {showFilteredContent(
+                            activeItem,
+                            currentPageProfileUserName,
+                            profile,
+                            isHostLogin,
+                            hostUserProfile,
+                            bio,
+                            followers,
+                            followings
+                        )}
                     </Segment>
                 </Grid.Column>
                 <Grid.Column width="6">

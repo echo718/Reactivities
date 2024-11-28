@@ -31,7 +31,7 @@ export const Navbar = observer(() => {
                 </Menu.Item>
                 <Menu.Item position="right">
                     <Image
-                        src={user?.image || 'assets/user.png'}
+                        src={user?.image || '/assets/user.png'}
                         avatar
                         spaced="right"
                     />

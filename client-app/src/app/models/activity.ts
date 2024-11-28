@@ -1,3 +1,5 @@
+import { Following } from './user';
+
 export interface Activity {
     id: string;
     title: string;
@@ -12,7 +14,7 @@ export interface Activity {
     attendees: Attendee[];
 }
 
-export interface Attendee {
+export interface Attendee extends Following {
     userName: string;
     displayName: string;
     bio: string | null;

@@ -47,7 +47,7 @@ export default class UserStore {
         }
     };
 
-    setImage = async (imageUrl: string | undefined) => {
+    setImage = async (imageUrl: string | null) => {
         try {
             runInAction(() => {
                 if (this.user) {

@@ -3,7 +3,13 @@ import { Activity } from '../models/activity';
 import { toast } from 'react-toastify';
 import { router } from '../router/Routers';
 import { store } from '../stores/store';
-import { BasicDetail, Photo, User, UserFormValues } from '../models/user';
+import {
+    BasicDetail,
+    Photo,
+    User,
+    UserFormValues,
+    Profile as ProfileType
+} from '../models/user';
 
 export const sleep = (delay: number) => {
     return new Promise((resolver) => {
@@ -111,7 +117,7 @@ const Profile = {
         currentPageProfileUserName: string,
         followingType: string
     ) =>
-        request.get<User>(
+        request.get<ProfileType[]>(
             `/follow/${currentPageProfileUserName}?predicate=${followingType}`
         )
 };

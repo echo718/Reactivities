@@ -2,15 +2,17 @@ import { makeAutoObservable, runInAction } from 'mobx';
 import { agent } from '../api/agent';
 import { BasicDetail, Profile } from '../models/user';
 import { store } from './store';
+import { FollowingTypes } from '../../features/profile/Functions/profileDics';
 
 export default class ProfileStore {
     profile: Profile | null = null;
     hostUserProfile: Profile | null = null;
-    profileImage: string | undefined = '';
+    profileImage: string | null = '';
     loadingProfile = false;
     loading = false;
     bio: string | undefined = undefined;
-    followings: Profile | undefined = undefined;
+    followings: Profile[] | undefined = undefined;
+    followers: Profile[] | undefined = undefined;
 
     constructor() {
         makeAutoObservable(this);
@@ -179,20 +181,24 @@ export default class ProfileStore {
         }
     };
 
-    getFollowings = async (
+    getFollows = async (
         currentPageProfileUserName: string,
         followingType: string
     ) => {
         this.setLoadingProfile(true);
         try {
-            const followingsProfile: Profile =
+            const followingsProfile: Profile[] =
                 (await agent.Profile.getFollowings(
                     currentPageProfileUserName,
                     followingType
-                )) as Profile;
+                )) as Profile[];
 
             runInAction(() => {
-                this.followings = followingsProfile;
+                if (followingType === FollowingTypes.Followers) {
+                    this.followers = followingsProfile;
+                } else {
+                    this.followings = followingsProfile;
+                }
                 this.setLoadingProfile(false);
             });
         } catch (error) {

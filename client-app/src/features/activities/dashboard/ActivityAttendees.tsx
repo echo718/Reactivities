@@ -1,6 +1,6 @@
 import { Attendee } from '../../../app/models/activity';
 import { Image, List, ListItem, Popup } from 'semantic-ui-react';
-import { AttendeeCard } from './AttendeeCard';
+import { ProfileCard } from '../../common/ProfileCard';
 import { Link } from 'react-router-dom';
 
 interface Props {
@@ -14,7 +14,13 @@ export const ActivityAttendees = ({ attendees }: Props) => {
                 <ListItem key={attendee.userName}>
                     <Link to={`/profile/${attendee.userName}`}>
                         <Popup
-                            content={<AttendeeCard attendee={attendee} />}
+                            content={
+                                <ProfileCard
+                                    profileImage={attendee.image}
+                                    profileDisplayName={attendee.displayName}
+                                    profileFollowCount={attendee.followersCount}
+                                />
+                            }
                             trigger={
                                 <Image
                                     src={attendee.image ?? '/assets/user.png'}
