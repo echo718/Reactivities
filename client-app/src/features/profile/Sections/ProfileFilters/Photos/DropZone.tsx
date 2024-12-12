@@ -2,7 +2,7 @@ import { observer } from 'mobx-react-lite';
 import { Button } from 'semantic-ui-react';
 import { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
-import { useStore } from '../../../../app/stores/store';
+import { useStore } from '../../../../../app/stores/store';
 
 export const DropZone = observer(() => {
     const { profileStore } = useStore();

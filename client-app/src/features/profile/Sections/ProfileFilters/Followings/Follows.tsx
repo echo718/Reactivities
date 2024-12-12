@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react-lite';
-import { Profile } from '../../../../app/models/user';
-import { ProfileCard } from '../../../common/ProfileCard';
-import { CardGroup, Label, Message } from 'semantic-ui-react';
-import { FollowingTypes } from '../../Functions/profileDics';
+import { CardGroup, Message } from 'semantic-ui-react';
+import { Profile } from '../../../../../app/models/user';
+import { ProfileCard } from '../../../../common/ProfileCard';
+import { FollowingTypes } from '../../../Functions/profileDics';
 
 interface FollowsProps {
     currentPageProfileUserName: string;

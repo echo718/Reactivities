@@ -1,7 +1,7 @@
 import { Profile } from '../../../app/models/user';
-import { About } from '../Filters/About/About';
-import { Follows } from '../Filters/Followings/Follows';
-import { Photos } from '../Filters/Photos/Photos';
+import { About } from '../Sections/ProfileFilters/About/About';
+import { Follows } from '../Sections/ProfileFilters/Followings/Follows';
+import { Photos } from '../Sections/ProfileFilters/Photos/Photos';
 import { FollowingTypes, ProfileCategories, ProfileDic } from './profileDics';
 
 export const showFilteredContent = (

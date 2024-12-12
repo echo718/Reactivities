@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react-lite';
 import { Button, Grid, GridColumn, Header, Image } from 'semantic-ui-react';
-import { LoadingComponent } from '../../../../app/layout/LoadingComponent';
 import { useEffect, useState } from 'react';
 import { UpdateProfileForm } from './UpdateProfileForm';
+import { LoadingComponent } from '../../../../../app/layout/LoadingComponent';
 
 interface AboutProps {
     userName: string;

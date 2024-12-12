@@ -119,7 +119,8 @@ const Profile = {
     ) =>
         request.get<ProfileType[]>(
             `/follow/${currentPageProfileUserName}?predicate=${followingType}`
-        )
+        ),
+    updateFollow: (name: string) => request.post<void>(`/follow/${name}`, {})
 };
 
 export const agent = {

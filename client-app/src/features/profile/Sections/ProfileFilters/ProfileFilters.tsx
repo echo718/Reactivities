@@ -1,9 +1,9 @@
 import { Header, Menu } from 'semantic-ui-react';
 import {
-    ProfileFilterSet,
     ProfileCategories,
-    ProfileDic
-} from '../Functions/profileDics';
+    ProfileDic,
+    ProfileFilterSet
+} from '../../Functions/profileDics';
 
 interface ProfileFiltersProps {
     activeMenuItem: (activeMenuName: ProfileCategories) => void;

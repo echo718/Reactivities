@@ -13,6 +13,8 @@ export default class ProfileStore {
     bio: string | undefined = undefined;
     followings: Profile[] | undefined = undefined;
     followers: Profile[] | undefined = undefined;
+    followingsCount: number = 0;
+    followersCount: number = 0;
 
     constructor() {
         makeAutoObservable(this);

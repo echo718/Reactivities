@@ -23,5 +23,9 @@ export type ProfileCategories =
 
 export const FollowingTypes = {
     Followings: 'followings',
-    Followers: 'followers'
+    Followers: 'followers',
+    Following: 'Following',
+    NotFollowing: 'Not Following',
+    Follow: 'Follow',
+    NotFollow: 'Not Follow'
 };

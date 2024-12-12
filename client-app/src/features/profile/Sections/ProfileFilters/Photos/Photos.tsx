@@ -1,4 +1,3 @@
-import { useStore } from '../../../../app/stores/store';
 import { observer } from 'mobx-react-lite';
 import {
     Button,
@@ -9,8 +8,9 @@ import {
     GridColumn,
     Image
 } from 'semantic-ui-react';
-import { Photo, Profile } from '../../../../app/models/user';
 import { DropZone } from './DropZone';
+import { Photo, Profile } from '../../../../../app/models/user';
+import { useStore } from '../../../../../app/stores/store';
 
 export const Photos = observer((props: { profile: Profile | null }) => {
     const { profileStore } = useStore();

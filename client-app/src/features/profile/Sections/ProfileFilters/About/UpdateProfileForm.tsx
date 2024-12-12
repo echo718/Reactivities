@@ -1,11 +1,11 @@
 import { Formik } from 'formik';
 import { observer } from 'mobx-react-lite';
 import { Button, Form, Segment } from 'semantic-ui-react';
-import { CustomTextInput } from '../../../../app/common/form/CustomTextInput';
 import * as Yup from 'yup';
-import { BasicDetail } from '../../../../app/models/user';
-import { useStore } from '../../../../app/stores/store';
-import { CustomTextareaAutosize } from '../../../../app/common/form/CustomTextAutoSize';
+import { useStore } from '../../../../../app/stores/store';
+import { BasicDetail } from '../../../../../app/models/user';
+import { CustomTextInput } from '../../../../../app/common/form/CustomTextInput';
+import { CustomTextareaAutosize } from '../../../../../app/common/form/CustomTextAutoSize';
 
 interface UpdateProfileFormProps {
     bio?: string;

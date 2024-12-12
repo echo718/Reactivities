@@ -2,15 +2,15 @@ import { Grid, Segment } from 'semantic-ui-react';
 import { useStore } from '../../app/stores/store';
 import { observer } from 'mobx-react-lite';
 import { LoadingComponent } from '../../app/layout/LoadingComponent';
-import { ProfileFilters } from './Filters/ProfileFilters';
 import { useEffect, useState } from 'react';
 import {
     ProfileDic,
     ProfileCategories,
     FollowingTypes
 } from './Functions/profileDics';
-import { Introduction } from './Sections/Introduction';
+import { Introduction } from './Sections/Introduction/Introduction';
 import { showFilteredContent } from './Functions/showFilteredContent';
+import { ProfileFilters } from './Sections/ProfileFilters/ProfileFilters';
 
 export const Profile = observer(() => {
     const urlDirectors = location.pathname.split('/');
@@ -63,7 +63,7 @@ export const Profile = observer(() => {
         );
     }, [loadingProfile, user, hostUserProfile]);
 
-    if (loadingProfile || !currentProfileImageUrl)
+    if (loadingProfile || !currentProfileImageUrl || !profile)
         return <LoadingComponent content="Loading profile" />;
 
     return (
@@ -73,6 +73,7 @@ export const Profile = observer(() => {
                 currentPageProfileUserName={currentPageProfileUserName}
                 profile={profile}
                 user={user}
+                isHost={isHostLogin}
             />
             <Grid>
                 <Grid.Column width="10">
@@ -80,7 +81,6 @@ export const Profile = observer(() => {
                         style={{
                             width: '100%',
                             marginTop: '4%'
-                            //minHeight: '260px'
                         }}
                     >
                         {showFilteredContent(
