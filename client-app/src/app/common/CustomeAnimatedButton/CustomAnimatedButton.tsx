@@ -14,6 +14,9 @@ interface CustomAnimatedButtonProps {
 }
 
 export const CustomAnimatedButton = (props: CustomAnimatedButtonProps) => {
+    {
+        console.log('props.profile', props.profile, props.user);
+    }
     const [isLoading, setIsLoading] = useState(false);
     const [visibleText, setVisibleText] = useState(
         !props.profile?.following
@@ -33,15 +36,12 @@ export const CustomAnimatedButton = (props: CustomAnimatedButtonProps) => {
             name,
             FollowingTypes.Followings
         )) as Profile[];
-
         const followersProfile: Profile[] = (await agent.Profile.getFollowings(
             name,
             FollowingTypes.Followers
         )) as Profile[];
-
         props.setFollowersCount(followersProfile.length);
         props.setFollowingsCount(followingsProfile.length);
-
         const isFollowCurrentPageUser =
             followersProfile.filter(
                 (following) => following.userName === props.user?.userName
@@ -56,7 +56,6 @@ export const CustomAnimatedButton = (props: CustomAnimatedButtonProps) => {
                 ? FollowingTypes.NotFollow
                 : FollowingTypes.Follow
         );
-
         setIsLoading(false);
     };
 

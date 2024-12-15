@@ -16,32 +16,26 @@ export const ActivityAttendees = ({ attendees }: Props) => {
         <List horizontal>
             {attendees.map((attendee: Attendee) => (
                 <ListItem key={attendee.userName}>
-                    <Link to={`/profile/${attendee.userName}`}>
-                        <Popup
-                            content={
-                                <ProfileCard
-                                    profileImage={attendee.image}
-                                    profileDisplayName={attendee.displayName}
-                                    followUserName={attendee.userName}
-                                    profileFollowCount={attendee.followersCount}
-                                    currentPageProfileUserName={
-                                        attendee.userName
-                                    }
-                                    profile={profile}
-                                    user={user}
-                                />
-                            }
-                            trigger={
-                                <Image
-                                    src={attendee.image ?? '/assets/user.png'}
-                                    size="mini"
-                                    circular
-                                />
-                            }
-                            mouseLeaveDelay={5000}
-                            style={{ cursor: 'pointer' }}
-                        ></Popup>
-                    </Link>
+                    <Popup
+                        content={
+                            <ProfileCard
+                                profileImage={attendee.image}
+                                profileDisplayName={attendee.displayName}
+                                followUserName={attendee.userName}
+                                profileFollowCount={attendee.followersCount}
+                                profile={profile}
+                                user={user}
+                            />
+                        }
+                        trigger={
+                            <Image
+                                src={attendee.image ?? '/assets/user.png'}
+                                size="mini"
+                                circular
+                            />
+                        }
+                        mouseLeaveDelay={5000}
+                    ></Popup>
                 </ListItem>
             ))}
         </List>

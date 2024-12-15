@@ -1,49 +1,65 @@
 import { Card, CardContent, CardHeader, Icon, Image } from 'semantic-ui-react';
 import { CustomAnimatedButton } from '../../app/common/CustomeAnimatedButton/CustomAnimatedButton';
 import { Profile, User } from '../../app/models/user';
+import { useState } from 'react';
 
 interface ProfileCardProps {
     profileImage: string | null;
     profileDisplayName: string;
     profileFollowCount: number;
     followUserName: string;
-    currentPageProfileUserName: string;
+    //currentPageProfileUserName: string;
     profile: Profile | null;
     user: User | null;
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
     const isHost = props.followUserName === props.user?.userName;
+    const [followersCount, setFollowersCount] = useState(
+        props.profileFollowCount
+    );
     return (
-        <Card
-            onClick={() => {
-                window.location.reload();
-                location.assign(`/profile/${props.profileDisplayName}`);
-            }}
-        >
+        <Card style={{ cursor: 'pointer' }}>
             <Image
                 src={props.profileImage ?? '/assets/user.png'}
                 wrapped
                 ui={false}
+                onClick={() => {
+                    window.location.reload();
+                    location.assign(`/profile/${props.profileDisplayName}`);
+                }}
             ></Image>
             <CardContent>
-                <CardHeader>{props.profileDisplayName}</CardHeader>
+                <CardHeader
+                    onClick={() => {
+                        window.location.reload();
+                        location.assign(`/profile/${props.profileDisplayName}`);
+                    }}
+                >
+                    {props.profileDisplayName}
+                </CardHeader>
             </CardContent>
-            <CardContent extra>
+            <CardContent
+                extra
+                onClick={() => {
+                    window.location.reload();
+                    location.assign(`/profile/${props.profileDisplayName}`);
+                }}
+            >
                 <>
                     <Icon name="user" />
-                    {props.profileFollowCount} Followers
+                    {followersCount} Followers
                 </>
             </CardContent>
             <CardContent>
                 {!isHost && (
                     <CustomAnimatedButton
-                        currentPageProfileUserName={
-                            props.currentPageProfileUserName
-                        }
+                        currentPageProfileUserName={props.followUserName}
                         profile={props.profile}
                         user={props.user}
-                        setFollowersCount={() => {}}
+                        setFollowersCount={(followersProfileLength: number) => {
+                            setFollowersCount(followersProfileLength);
+                        }}
                         setFollowingsCount={() => {}}
                     />
                 )}

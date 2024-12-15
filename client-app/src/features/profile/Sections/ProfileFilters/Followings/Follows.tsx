@@ -12,7 +12,7 @@ interface FollowsProps {
     user: User | null;
 }
 
-export const Follows = observer((props: FollowsProps) => {
+export const Follows = (props: FollowsProps) => {
     const hasFollows = props.follows ? props.follows.length > 0 : false;
     return (
         <>
@@ -25,9 +25,9 @@ export const Follows = observer((props: FollowsProps) => {
                             profileDisplayName={follow.displayName}
                             followUserName={follow.userName}
                             profileFollowCount={follow.followersCount}
-                            currentPageProfileUserName={
-                                props.currentPageProfileUserName
-                            }
+                            // currentPageProfileUserName={
+                            //     props.currentPageProfileUserName
+                            // }
                             profile={props.profile}
                             user={props.user}
                         />
@@ -48,4 +48,4 @@ export const Follows = observer((props: FollowsProps) => {
             )}
         </>
     );
-});
+};
