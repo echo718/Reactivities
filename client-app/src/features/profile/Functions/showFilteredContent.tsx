@@ -1,4 +1,4 @@
-import { Profile } from '../../../app/models/user';
+import { Profile, User } from '../../../app/models/user';
 import { About } from '../Sections/ProfileFilters/About/About';
 import { Follows } from '../Sections/ProfileFilters/Followings/Follows';
 import { Photos } from '../Sections/ProfileFilters/Photos/Photos';
@@ -10,6 +10,7 @@ export const showFilteredContent = (
     profile: Profile | null,
     isHostLogin: boolean,
     hostUserProfile: Profile | null,
+    user: User | null,
     bio?: string,
     followers?: Profile[],
     followings?: Profile[]
@@ -34,6 +35,8 @@ export const showFilteredContent = (
                     follows={followers}
                     currentPageProfileUserName={currentPageProfileUserName}
                     followingType={FollowingTypes.Followers}
+                    profile={profile}
+                    user={user}
                 />
             );
         case ProfileDic.Followings:
@@ -42,6 +45,8 @@ export const showFilteredContent = (
                     follows={followings}
                     currentPageProfileUserName={currentPageProfileUserName}
                     followingType={FollowingTypes.Followings}
+                    profile={profile}
+                    user={user}
                 />
             );
     }

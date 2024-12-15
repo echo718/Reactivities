@@ -1,6 +1,6 @@
 import { observer } from 'mobx-react-lite';
 import { CardGroup, Message } from 'semantic-ui-react';
-import { Profile } from '../../../../../app/models/user';
+import { Profile, User } from '../../../../../app/models/user';
 import { ProfileCard } from '../../../../common/ProfileCard';
 import { FollowingTypes } from '../../../Functions/profileDics';
 
@@ -8,6 +8,8 @@ interface FollowsProps {
     currentPageProfileUserName: string;
     followingType: string;
     follows?: Profile[];
+    profile: Profile | null;
+    user: User | null;
 }
 
 export const Follows = observer((props: FollowsProps) => {
@@ -21,7 +23,13 @@ export const Follows = observer((props: FollowsProps) => {
                             key={index}
                             profileImage={follow.image}
                             profileDisplayName={follow.displayName}
+                            followUserName={follow.userName}
                             profileFollowCount={follow.followersCount}
+                            currentPageProfileUserName={
+                                props.currentPageProfileUserName
+                            }
+                            profile={props.profile}
+                            user={props.user}
                         />
                     ))}
                 </CardGroup>

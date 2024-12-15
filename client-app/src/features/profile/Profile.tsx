@@ -89,6 +89,7 @@ export const Profile = observer(() => {
                             profile,
                             isHostLogin,
                             hostUserProfile,
+                            user,
                             bio,
                             followers,
                             followings
