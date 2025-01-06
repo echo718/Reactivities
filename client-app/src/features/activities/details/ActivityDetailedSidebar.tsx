@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { observer } from 'mobx-react-lite';
 import { Attendee } from '../../../app/models/activity';
 import { useStore } from '../../../app/stores/store';
+import {
+    FollowingTypes,
+    ProfileDic
+} from '../../profile/Functions/profileDics';
 
 interface Props {
     attendees: Attendee[];
@@ -21,6 +25,11 @@ export default observer(function ActivityDetailedSidebar({
         return a.userName.localeCompare(b.userName);
     });
 
+    const getFollowingType = (attendee: Attendee) => {
+        return attendee.following
+            ? FollowingTypes.Following
+            : FollowingTypes.NotFollowing;
+    };
     return (
         <>
             <Segment
@@ -77,7 +86,9 @@ export default observer(function ActivityDetailedSidebar({
                                             color: 'orange'
                                         }}
                                     >
-                                        {isHostName ? null : 'Following'}
+                                        {isHostName
+                                            ? null
+                                            : getFollowingType(attendee)}
                                     </Item.Extra>
                                 </Item.Content>
                             </Item>

@@ -14,6 +14,7 @@ interface FollowsProps {
 
 export const Follows = (props: FollowsProps) => {
     const hasFollows = props.follows ? props.follows.length > 0 : false;
+
     return (
         <>
             {hasFollows ? (
@@ -28,7 +29,8 @@ export const Follows = (props: FollowsProps) => {
                             // currentPageProfileUserName={
                             //     props.currentPageProfileUserName
                             // }
-                            profile={props.profile}
+                            isFollowing={follow.following}
+                            // profile={props.profile}
                             user={props.user}
                         />
                     ))}

@@ -23,7 +23,8 @@ export const ActivityAttendees = ({ attendees }: Props) => {
                                 profileDisplayName={attendee.displayName}
                                 followUserName={attendee.userName}
                                 profileFollowCount={attendee.followersCount}
-                                profile={profile}
+                                //profile={profile}
+                                isFollowing={profile?.following ?? false}
                                 user={user}
                             />
                         }

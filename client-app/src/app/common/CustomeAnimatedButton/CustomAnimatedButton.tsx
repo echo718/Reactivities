@@ -7,26 +7,22 @@ import { Profile, User } from '../../models/user';
 
 interface CustomAnimatedButtonProps {
     currentPageProfileUserName: string;
-    profile: Profile | null;
+    // profile: Profile | null;
     user: User | null;
+    isFollowing: boolean;
     setFollowersCount: (followersProfileLength: number) => void;
     setFollowingsCount: (followingsProfileLength: number) => void;
 }
 
 export const CustomAnimatedButton = (props: CustomAnimatedButtonProps) => {
-    {
-        console.log('props.profile', props.profile, props.user);
-    }
     const [isLoading, setIsLoading] = useState(false);
     const [visibleText, setVisibleText] = useState(
-        !props.profile?.following
+        !props.isFollowing
             ? FollowingTypes.NotFollowing
             : FollowingTypes.Following
     );
     const [hiddenText, setHiddenText] = useState(
-        !props.profile?.following
-            ? FollowingTypes.Follow
-            : FollowingTypes.NotFollow
+        !props.isFollowing ? FollowingTypes.Follow : FollowingTypes.NotFollow
     );
 
     const updateFollows = async (name: string) => {

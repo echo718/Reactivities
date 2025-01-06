@@ -3,7 +3,9 @@ export const ProfileDic: { [key in ProfileCategories]: string } = {
     Photos: 'Photos',
     Events: 'Events',
     Followers: 'Followers',
-    Followings: 'Followings'
+    Followings: 'Followings',
+    Follower: 'Follower',
+    Following: 'Following'
 };
 
 export const ProfileFilterSet = [
@@ -19,7 +21,9 @@ export type ProfileCategories =
     | 'Photos'
     | 'Events'
     | 'Followers'
-    | 'Followings';
+    | 'Followings'
+    | 'Follower'
+    | 'Following';
 
 export const FollowingTypes = {
     Followings: 'followings',

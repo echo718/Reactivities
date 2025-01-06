@@ -25,12 +25,20 @@ export const FollowsAtIntroduction = observer(
             <Segment basic textAlign="center">
                 <Statistic
                     size="small"
-                    label={ProfileDic.Followers}
+                    label={
+                        followersCount === 1 || followersCount === 0
+                            ? ProfileDic.Follower
+                            : ProfileDic.Followers
+                    }
                     value={followersCount}
                 />
                 <Statistic
                     size="small"
-                    label={ProfileDic.Followings}
+                    label={
+                        followingsCount === 0 || followingsCount === 1
+                            ? ProfileDic.Following
+                            : ProfileDic.Followings
+                    }
                     value={followingsCount}
                 />
 
@@ -42,8 +50,7 @@ export const FollowsAtIntroduction = observer(
                             currentPageProfileUserName={
                                 props.currentPageProfileUserName
                             }
-                            //isHost={props.isHost}
-                            profile={props.profile}
+                            isFollowing={props.profile?.following ?? false}
                             user={props.user}
                             setFollowersCount={(
                                 followersProfileLength: number

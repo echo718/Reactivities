@@ -1,16 +1,16 @@
 import { Card, CardContent, CardHeader, Icon, Image } from 'semantic-ui-react';
 import { CustomAnimatedButton } from '../../app/common/CustomeAnimatedButton/CustomAnimatedButton';
-import { Profile, User } from '../../app/models/user';
+import { User } from '../../app/models/user';
 import { useState } from 'react';
+import { ProfileDic } from '../profile/Functions/profileDics';
 
 interface ProfileCardProps {
     profileImage: string | null;
     profileDisplayName: string;
     profileFollowCount: number;
     followUserName: string;
-    //currentPageProfileUserName: string;
-    profile: Profile | null;
     user: User | null;
+    isFollowing: boolean;
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
@@ -18,6 +18,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
     const [followersCount, setFollowersCount] = useState(
         props.profileFollowCount
     );
+    const getFollowerUnitName = (count: number) => {
+        return count === 1 || count === 0
+            ? ProfileDic.Follower
+            : ProfileDic.Followers;
+    };
     return (
         <Card style={{ cursor: 'pointer' }}>
             <Image
@@ -48,14 +53,14 @@ export const ProfileCard = (props: ProfileCardProps) => {
             >
                 <>
                     <Icon name="user" />
-                    {followersCount} Followers
+                    {followersCount} {getFollowerUnitName(followersCount)}
                 </>
             </CardContent>
             <CardContent>
                 {!isHost && (
                     <CustomAnimatedButton
                         currentPageProfileUserName={props.followUserName}
-                        profile={props.profile}
+                        isFollowing={props.isFollowing}
                         user={props.user}
                         setFollowersCount={(followersProfileLength: number) => {
                             setFollowersCount(followersProfileLength);
