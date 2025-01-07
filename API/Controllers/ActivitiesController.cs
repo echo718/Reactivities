@@ -1,4 +1,5 @@
 using Application.Activities;
+using Application.Core;
 using Domain;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -17,9 +18,9 @@ namespace API.Controllers
         }
 
         [HttpGet] //api/activities
-        public async Task<ActionResult<List<Activity>>> GetActivities(CancellationToken ct)
+        public async Task<ActionResult<List<Activity>>> GetActivities([FromQuery] PagingParams param)
         {
-            return HandleResult(await Mediator.Send(new Application.Activities.List.Query(), ct));
+            return HandlePagesResult(await Mediator.Send(new Application.Activities.List.Query { Params = param }));
         }
 
         [HttpGet("{id}")] //api/activities/jkljk

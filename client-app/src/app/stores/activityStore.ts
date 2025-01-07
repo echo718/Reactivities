@@ -2,6 +2,7 @@ import { makeAutoObservable, runInAction } from 'mobx';
 import { Activity } from '../models/activity';
 import { agent } from '../api/agent';
 import { format } from 'date-fns';
+import { Pagination } from '../models/pagination';
 
 export default class ActivityStore {
     activityRegistry: Map<string, Activity> = new Map<string, Activity>();
@@ -9,6 +10,7 @@ export default class ActivityStore {
     editMode = false;
     loading = false;
     loadingInitial = false;
+    pagination: Pagination | null = null;
 
     constructor() {
         makeAutoObservable(this);
@@ -35,18 +37,23 @@ export default class ActivityStore {
     loadActivities = async () => {
         this.setLoadingInitial(true);
         try {
-            const activities = await agent.Activities.list();
+            const results = await agent.Activities.list();
             runInAction(() => {
-                activities.forEach((activity) => {
+                results.data.forEach((activity) => {
                     this.setActivity(activity);
                     this.activityRegistry.set(activity.id, activity);
                 });
             });
+            this.setPagination(results.pagination);
             this.setLoadingInitial(false);
         } catch (error) {
             console.log(error);
             this.setLoadingInitial(false);
         }
+    };
+
+    setPagination = (pagination: Pagination) => {
+        this.pagination = pagination;
     };
 
     loadActivity = async (id: string) => {

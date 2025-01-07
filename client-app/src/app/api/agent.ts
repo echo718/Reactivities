@@ -10,6 +10,7 @@ import {
     UserFormValues,
     Profile as ProfileType
 } from '../models/user';
+import { PaginatedResult } from '../models/pagination';
 
 export const sleep = (delay: number) => {
     return new Promise((resolver) => {
@@ -29,6 +30,14 @@ axios.interceptors.request.use((config) => {
 axios.interceptors.response.use(
     async (response) => {
         await sleep(1000);
+        const pagination = response.headers['pagination'];
+        if (pagination) {
+            response.data = new PaginatedResult(
+                response.data,
+                JSON.parse(pagination)
+            );
+            return response as AxiosResponse<PaginatedResult<any>>;
+        }
         return response;
     },
     (error: AxiosError) => {
@@ -84,7 +93,7 @@ const request = {
 };
 
 const Activities = {
-    list: () => request.get<Activity[]>('/activities'),
+    list: () => request.get<PaginatedResult<Activity[]>>('/activities'),
     details: (id: string) => request.get<Activity>(`/activities/${id}`),
     create: (activity: Activity) => request.post<void>('/activities', activity),
     update: (activity: Activity) =>
