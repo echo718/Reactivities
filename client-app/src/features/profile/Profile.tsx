@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 import {
     ProfileDic,
     ProfileCategories,
-    FollowingTypes
+    FollowingTypes,
+    EventsCategories
 } from './Functions/profileDics';
 import { Introduction } from './Sections/Introduction/Introduction';
 import { showFilteredContent } from './Functions/showFilteredContent';
@@ -37,7 +38,9 @@ export const Profile = observer(() => {
         loadCurrentPageUserProfile,
         getFollows: getFollowings,
         followings,
-        followers
+        followers,
+        getEvents,
+        events
     } = profileStore;
     const { getCurrentUser, user } = userStore;
 
@@ -49,6 +52,7 @@ export const Profile = observer(() => {
         getBio(currentPageProfileUserName);
         getFollowings(currentPageProfileUserName, FollowingTypes.Followings);
         getFollowings(currentPageProfileUserName, FollowingTypes.Followers);
+        getEvents(currentPageProfileUserName, 'future' as EventsCategories);
     }, []);
 
     useEffect(() => {
@@ -90,6 +94,7 @@ export const Profile = observer(() => {
                             isHostLogin,
                             hostUserProfile,
                             user,
+                            events,
                             bio,
                             followers,
                             followings

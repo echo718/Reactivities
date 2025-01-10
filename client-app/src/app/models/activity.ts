@@ -1,11 +1,7 @@
 import { Following } from './user';
 
-export interface Activity {
-    id: string;
-    title: string;
-    date: Date | null;
+export interface Activity extends ProfileEvent {
     description: string;
-    category: string;
     city: string;
     venue: string;
     hostUserName: string;
@@ -19,4 +15,11 @@ export interface Attendee extends Following {
     displayName: string;
     bio: string | null;
     image: string | null;
+}
+
+export interface ProfileEvent {
+    id: string;
+    title: string;
+    date: Date | null;
+    category: string;
 }

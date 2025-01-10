@@ -1,7 +1,6 @@
 import { Attendee } from '../../../app/models/activity';
 import { Image, List, ListItem, Popup } from 'semantic-ui-react';
-import { ProfileCard } from '../../common/ProfileCard';
-import { Link } from 'react-router-dom';
+import { CustomProfileCard } from '../../common/CustomProfileCard';
 import { useStore } from '../../../app/stores/store';
 
 interface Props {
@@ -18,7 +17,7 @@ export const ActivityAttendees = ({ attendees }: Props) => {
                 <ListItem key={attendee.userName}>
                     <Popup
                         content={
-                            <ProfileCard
+                            <CustomProfileCard
                                 profileImage={attendee.image}
                                 profileDisplayName={attendee.displayName}
                                 followUserName={attendee.userName}

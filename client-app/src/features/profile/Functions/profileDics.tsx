@@ -33,3 +33,15 @@ export const FollowingTypes = {
     Follow: 'Follow',
     NotFollow: 'Not Follow'
 };
+
+export const EventsDic: {
+    [key in EventsCategories]: { tabName: string; tabType: EventsCategories };
+} = {
+    future: { tabName: 'Future Activities', tabType: 'future' },
+    past: { tabName: 'Past Activities', tabType: 'past' },
+    hosting: { tabName: 'Hosting', tabType: 'hosting' }
+};
+
+export const EventsSet = [EventsDic.future, EventsDic.past, EventsDic.hosting];
+
+export type EventsCategories = 'future' | 'past' | 'hosting';

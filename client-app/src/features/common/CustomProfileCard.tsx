@@ -4,7 +4,7 @@ import { User } from '../../app/models/user';
 import { useState } from 'react';
 import { ProfileDic } from '../profile/Functions/profileDics';
 
-interface ProfileCardProps {
+interface CustomProfileCardProps {
     profileImage: string | null;
     profileDisplayName: string;
     profileFollowCount: number;
@@ -13,7 +13,7 @@ interface ProfileCardProps {
     isFollowing: boolean;
 }
 
-export const ProfileCard = (props: ProfileCardProps) => {
+export const CustomProfileCard = (props: CustomProfileCardProps) => {
     const isHost = props.followUserName === props.user?.userName;
     const [followersCount, setFollowersCount] = useState(
         props.profileFollowCount

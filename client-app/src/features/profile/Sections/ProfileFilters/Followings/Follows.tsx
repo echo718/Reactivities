@@ -1,7 +1,6 @@
-import { observer } from 'mobx-react-lite';
 import { CardGroup, Message } from 'semantic-ui-react';
 import { Profile, User } from '../../../../../app/models/user';
-import { ProfileCard } from '../../../../common/ProfileCard';
+import { CustomProfileCard } from '../../../../common/CustomProfileCard';
 import { FollowingTypes } from '../../../Functions/profileDics';
 
 interface FollowsProps {
@@ -20,7 +19,7 @@ export const Follows = (props: FollowsProps) => {
             {hasFollows ? (
                 <CardGroup>
                     {props.follows?.map((follow: Profile, index) => (
-                        <ProfileCard
+                        <CustomProfileCard
                             key={index}
                             profileImage={follow.image}
                             profileDisplayName={follow.displayName}

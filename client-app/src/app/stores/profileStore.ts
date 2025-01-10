@@ -2,7 +2,11 @@ import { makeAutoObservable, runInAction } from 'mobx';
 import { agent } from '../api/agent';
 import { BasicDetail, Profile } from '../models/user';
 import { store } from './store';
-import { FollowingTypes } from '../../features/profile/Functions/profileDics';
+import {
+    EventsCategories,
+    FollowingTypes
+} from '../../features/profile/Functions/profileDics';
+import { ProfileEvent } from '../models/activity';
 
 export default class ProfileStore {
     profile: Profile | null = null;
@@ -15,6 +19,8 @@ export default class ProfileStore {
     followers: Profile[] | undefined = undefined;
     followingsCount: number = 0;
     followersCount: number = 0;
+    events: ProfileEvent[] | null = null;
+    loadingEvents = false;
 
     constructor() {
         makeAutoObservable(this);
@@ -22,6 +28,10 @@ export default class ProfileStore {
 
     setLoadingProfile = (state: boolean) => {
         this.loadingProfile = state;
+    };
+
+    setLoadingEvents = (state: boolean) => {
+        this.loadingEvents = state;
     };
 
     loadHostUserProfile = async () => {
@@ -207,6 +217,22 @@ export default class ProfileStore {
             console.log(error);
             runInAction(() => {
                 this.setLoadingProfile(false);
+            });
+        }
+    };
+
+    getEvents = async (userName: string, predicate: EventsCategories) => {
+        this.setLoadingEvents(true);
+        try {
+            const events = await agent.Profile.getEvents(userName, predicate);
+            runInAction(() => {
+                this.events = events;
+                this.setLoadingEvents(false);
+            });
+        } catch (error) {
+            console.log(error);
+            runInAction(() => {
+                this.setLoadingEvents(false);
             });
         }
     };

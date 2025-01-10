@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
-import { Activity } from '../models/activity';
+import { Activity, ProfileEvent } from '../models/activity';
 import { toast } from 'react-toastify';
 import { router } from '../router/Routers';
 import { store } from '../stores/store';
@@ -132,7 +132,11 @@ const Profile = {
         request.get<ProfileType[]>(
             `/follow/${currentPageProfileUserName}?predicate=${followingType}`
         ),
-    updateFollow: (name: string) => request.post<void>(`/follow/${name}`, {})
+    updateFollow: (name: string) => request.post<void>(`/follow/${name}`, {}),
+    getEvents: (userName: string, predicate: string) =>
+        request.get<ProfileEvent[]>(
+            `/profiles/${userName}/activities?predicate=${predicate}`
+        )
 };
 
 export const agent = {

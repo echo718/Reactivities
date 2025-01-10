@@ -1,5 +1,6 @@
 import { Profile, User } from '../../../app/models/user';
 import { About } from '../Sections/ProfileFilters/About/About';
+import { Events } from '../Sections/ProfileFilters/Events/Events';
 import { Follows } from '../Sections/ProfileFilters/Followings/Follows';
 import { Photos } from '../Sections/ProfileFilters/Photos/Photos';
 import { FollowingTypes, ProfileCategories, ProfileDic } from './profileDics';
@@ -11,6 +12,7 @@ export const showFilteredContent = (
     isHostLogin: boolean,
     hostUserProfile: Profile | null,
     user: User | null,
+    events: Event[] | null,
     bio?: string,
     followers?: Profile[],
     followings?: Profile[]
@@ -28,7 +30,12 @@ export const showFilteredContent = (
         case ProfileDic.Photos:
             return <Photos profile={hostUserProfile} />;
         case ProfileDic.Events:
-            return <div>events</div>;
+            return (
+                <Events
+                    currentPageProfileUserName={currentPageProfileUserName}
+                    events={events}
+                />
+            );
         case ProfileDic.Followers:
             return (
                 <Follows
