@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, Icon, Image } from 'semantic-ui-react';
 
 interface CustomEventCardProps {
+    id: string;
     category: string;
     title: string;
     date: string;
@@ -12,18 +13,16 @@ export const CustomEventCard = (props: CustomEventCardProps) => {
         <Card style={{ cursor: 'pointer' }}>
             <Image
                 src={`/assets/categoryImages/${props.category?.toLowerCase()}.jpg`}
-                fluid
-                //style={activityImageStyle}
                 onClick={() => {
                     window.location.reload();
-                    //  location.assign(`/profile/${props.profileDisplayName}`);
+                    location.assign(`/activities/${props.id}`);
                 }}
             />
             <CardContent>
                 <CardHeader
                     onClick={() => {
                         window.location.reload();
-                        //  location.assign(`/profile/${props.profileDisplayName}`);
+                        location.assign(`/activities/${props.id}`);
                     }}
                 >
                     {props.title}
@@ -33,21 +32,19 @@ export const CustomEventCard = (props: CustomEventCardProps) => {
                 extra
                 onClick={() => {
                     window.location.reload();
-                    //  location.assign(`/profile/${props.profileDisplayName}`);
+                    location.assign(`/activities/${props.id}`);
                 }}
             >
-                {' '}
-                {props.date}
+                Activity Date: {props.date}
             </CardContent>
             <CardContent
                 extra
                 onClick={() => {
                     window.location.reload();
-                    // location.assign(`/profile/${props.profileDisplayName}`);
+                    location.assign(`/activities/${props.id}`);
                 }}
             >
-                {' '}
-                {props.time}
+                Activity Time: {props.time}
             </CardContent>
         </Card>
     );

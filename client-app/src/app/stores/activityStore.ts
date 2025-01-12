@@ -112,7 +112,7 @@ export default class ActivityStore {
 
     loadActivity = async (id: string) => {
         this.setLoadingInitial(true);
-        let activity = await this.getActivity(id);
+        let activity = await agent.Activities.details(id);
         if (activity) {
             this.selectedActivity = activity;
             this.setLoadingInitial(false);
@@ -128,10 +128,6 @@ export default class ActivityStore {
                 this.setLoadingInitial(false);
             }
         }
-    };
-
-    private getActivity = async (id: string) => {
-        return this.activityRegistry.get(id);
     };
 
     private setActivity = (activity: Activity) => {

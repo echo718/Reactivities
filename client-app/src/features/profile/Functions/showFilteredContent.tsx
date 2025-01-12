@@ -1,3 +1,4 @@
+import { ProfileEvent } from '../../../app/models/activity';
 import { Profile, User } from '../../../app/models/user';
 import { About } from '../Sections/ProfileFilters/About/About';
 import { Events } from '../Sections/ProfileFilters/Events/Events';
@@ -12,7 +13,7 @@ export const showFilteredContent = (
     isHostLogin: boolean,
     hostUserProfile: Profile | null,
     user: User | null,
-    events: Event[] | null,
+    events: ProfileEvent[] | null,
     bio?: string,
     followers?: Profile[],
     followings?: Profile[]
@@ -33,7 +34,7 @@ export const showFilteredContent = (
             return (
                 <Events
                     currentPageProfileUserName={currentPageProfileUserName}
-                    events={events}
+                    initialEvents={events}
                 />
             );
         case ProfileDic.Followers:

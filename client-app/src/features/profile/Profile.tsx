@@ -40,7 +40,7 @@ export const Profile = observer(() => {
         followings,
         followers,
         getEvents,
-        events
+        renderedEvents: events
     } = profileStore;
     const { getCurrentUser, user } = userStore;
 

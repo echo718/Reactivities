@@ -11,5 +11,6 @@ namespace Application.Activities
         public bool IsGoing { get; set; }
         public bool IsHosting { get; set; }
         public DateTime StartDate { get; set; } = DateTime.UtcNow;
+
     }
 }

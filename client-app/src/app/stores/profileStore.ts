@@ -19,7 +19,7 @@ export default class ProfileStore {
     followers: Profile[] | undefined = undefined;
     followingsCount: number = 0;
     followersCount: number = 0;
-    events: ProfileEvent[] | null = null;
+    renderedEvents: ProfileEvent[] | null = null;
     loadingEvents = false;
 
     constructor() {
@@ -226,7 +226,7 @@ export default class ProfileStore {
         try {
             const events = await agent.Profile.getEvents(userName, predicate);
             runInAction(() => {
-                this.events = events;
+                this.renderedEvents = events;
                 this.setLoadingEvents(false);
             });
         } catch (error) {
