@@ -8,6 +8,7 @@ import { NotFound } from '../../features/errors/NotFound';
 import { ServerError } from '../../features/errors/ServerError';
 import { LoginForm } from '../../features/users/LoginForm';
 import { Profile } from '../../features/profile/Profile';
+import { RequireAuth } from './RequireAuth';
 
 export const routes: RouteObject[] = [
     {
@@ -15,44 +16,49 @@ export const routes: RouteObject[] = [
         element: <App />,
         children: [
             {
-                path: 'activities',
-                element: <ActivityDashboard />
-            },
-            {
-                path: 'activities/:id',
-                element: <ActivityDetails />
-            },
-            {
-                path: 'createActivity',
-                element: <ActivityForm key="create" />
-            },
-            {
-                path: 'manage/:id',
-                element: <ActivityForm key="manage" />
-            },
-            {
-                path: 'errors',
-                element: <TestErrors key="errors" />
-            },
-            {
-                path: 'not-found',
-                element: <NotFound />
-            },
-            {
-                path: 'server-error',
-                element: <ServerError />
+                element: <RequireAuth />,
+                children: [
+                    {
+                        path: 'activities',
+                        element: <ActivityDashboard />
+                    },
+                    {
+                        path: 'activities/:id',
+                        element: <ActivityDetails />
+                    },
+                    {
+                        path: 'createActivity',
+                        element: <ActivityForm key="create" />
+                    },
+                    {
+                        path: 'manage/:id',
+                        element: <ActivityForm key="manage" />
+                    },
+                    {
+                        path: 'errors',
+                        element: <TestErrors key="errors" />
+                    },
+                    {
+                        path: 'profile/:userName',
+                        element: <Profile />
+                    }
+                ]
             },
             {
                 path: 'login',
                 element: <LoginForm />
             },
             {
-                path: 'profile/:userName',
-                element: <Profile />
+                path: 'not-found',
+                element: <NotFound />
             },
             {
                 path: '*',
                 element: <Navigate replace to="/not-found" />
+            },
+            {
+                path: 'server-error',
+                element: <ServerError />
             }
         ]
     }

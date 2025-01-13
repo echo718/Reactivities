@@ -6,6 +6,7 @@ import {
     CardGroup,
     Grid,
     GridColumn,
+    Header,
     Image
 } from 'semantic-ui-react';
 import { DropZone } from './DropZone';
@@ -24,19 +25,15 @@ export const Photos = observer((props: { profile: Profile | null }) => {
             }}
         >
             <GridColumn floated="left" width={10}>
-                <Image
-                    src={'/assets/gallery.png'}
-                    size="mini"
-                    verticalAlign="middle"
-                />
-                <span
-                    style={{
-                        fontSize: '20px',
-                        marginLeft: '2%'
-                    }}
-                >
+                <Header as="h2">
+                    {' '}
+                    <Image
+                        src={'/assets/gallery.png'}
+                        size="mini"
+                        verticalAlign="middle"
+                    />
                     Photos
-                </span>
+                </Header>
             </GridColumn>
             <GridColumn floated="right" width={4}>
                 <DropZone />

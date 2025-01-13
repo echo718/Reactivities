@@ -11,10 +11,9 @@ const activityImageStyle = {
 
 const activityImageTextStyle = {
     position: 'absolute',
-    bottom: '5%',
+    bottom: '30%',
     left: '5%',
     width: '100%',
-    height: 'auto',
     color: 'white'
 };
 
@@ -59,7 +58,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                 <Segment style={activityImageTextStyle} basic>
                     <Item.Group>
                         <Item>
-                            <Item.Content>
+                            <Item.Content verticalAlign="middle">
                                 <Header
                                     size="huge"
                                     content={activity.title}

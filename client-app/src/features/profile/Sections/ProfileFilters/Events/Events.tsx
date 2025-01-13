@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import { Grid, GridColumn, Header, Icon, Tab } from 'semantic-ui-react';
+import { Grid, GridColumn, Header, Image, Tab } from 'semantic-ui-react';
 import { useEffect, useState } from 'react';
 import { useStore } from '../../../../../app/stores/store';
 import { ProfileEvent } from '../../../../../app/models/activity';
@@ -41,7 +41,11 @@ export const Events = observer(
                 >
                     <GridColumn floated="left" width={10}>
                         <Header as="h2">
-                            <Icon name="home" size="small" />
+                            <Image
+                                src={'/assets/activities.png'}
+                                size="mini"
+                                verticalAlign="middle"
+                            />
                             Activities
                         </Header>
                     </GridColumn>
