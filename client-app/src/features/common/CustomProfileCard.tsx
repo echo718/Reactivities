@@ -34,20 +34,11 @@ export const CustomProfileCard = (props: CustomProfileCardProps) => {
                 ui={false}
                 as={Link}
                 to={`/profile/${props.profileDisplayName.toLocaleLowerCase()}`}
-                // onClick={() => {
-                //     // navigate(`/profile/${props.profileDisplayName}`);
-                //     window.location.reload();
-                //     location.assign(`/profile/${props.profileDisplayName}`);
-                // }}
             ></Image>
             <CardContent>
                 <CardHeader
                     as={Link}
                     to={`/profile/${props.profileDisplayName.toLocaleLowerCase()}`}
-                    // onClick={() => {
-                    //     window.location.reload();
-                    //     location.assign(`/profile/${props.profileDisplayName}`);
-                    // }}
                 >
                     {props.profileDisplayName}
                 </CardHeader>
@@ -56,10 +47,6 @@ export const CustomProfileCard = (props: CustomProfileCardProps) => {
                 extra
                 as={Link}
                 to={`/profile/${props.profileDisplayName.toLocaleLowerCase()}`}
-                // onClick={() => {
-                //     window.location.reload();
-                //     location.assign(`/profile/${props.profileDisplayName}`);
-                // }}
             >
                 <>
                     <Icon name="user" />

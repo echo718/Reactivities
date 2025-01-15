@@ -16,43 +16,16 @@ export const CustomEventCard = (props: CustomEventCardProps) => {
                 src={`/assets/categoryImages/${props.category?.toLowerCase()}.jpg`}
                 as={Link}
                 to={`/activities/${props.id}`}
-                // onClick={() => {
-                //     window.location.reload();
-                //     location.assign(`/activities/${props.id}`);
-                // }}
             />
             <CardContent>
-                <CardHeader
-                    as={Link}
-                    to={`/activities/${props.id}`}
-                    // onClick={() => {
-                    //     window.location.reload();
-                    //     location.assign(`/activities/${props.id}`);
-                    // }}
-                >
+                <CardHeader as={Link} to={`/activities/${props.id}`}>
                     {props.title}
                 </CardHeader>
             </CardContent>
-            <CardContent
-                extra
-                as={Link}
-                to={`/activities/${props.id}`}
-                // onClick={() => {
-                //     window.location.reload();
-                //     location.assign(`/activities/${props.id}`);
-                // }}
-            >
+            <CardContent extra as={Link} to={`/activities/${props.id}`}>
                 Activity Date: {props.date}
             </CardContent>
-            <CardContent
-                extra
-                as={Link}
-                to={`/activities/${props.id}`}
-                // onClick={() => {
-                //     window.location.reload();
-                //     location.assign(`/activities/${props.id}`);
-                // }}
-            >
+            <CardContent extra as={Link} to={`/activities/${props.id}`}>
                 Activity Time: {props.time}
             </CardContent>
         </Card>

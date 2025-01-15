@@ -25,11 +25,7 @@ export const Follows = (props: FollowsProps) => {
                             profileDisplayName={follow.displayName}
                             followUserName={follow.userName}
                             profileFollowCount={follow.followersCount}
-                            // currentPageProfileUserName={
-                            //     props.currentPageProfileUserName
-                            // }
                             isFollowing={follow.following}
-                            // profile={props.profile}
                             user={props.user}
                         />
                     ))}
