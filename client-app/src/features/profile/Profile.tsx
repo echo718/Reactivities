@@ -12,6 +12,7 @@ import {
 import { Introduction } from './Sections/Introduction/Introduction';
 import { showFilteredContent } from './Functions/showFilteredContent';
 import { ProfileFilters } from './Sections/ProfileFilters/ProfileFilters';
+import { useParams } from 'react-router-dom';
 
 export const Profile = observer(() => {
     const urlDirectors = location.pathname.split('/');
@@ -54,6 +55,7 @@ export const Profile = observer(() => {
         getFollowings(currentPageProfileUserName, FollowingTypes.Followers);
         getEvents(currentPageProfileUserName, 'future' as EventsCategories);
     }, []);
+    const { userName } = useParams();
 
     useEffect(() => {
         const isHost = user?.userName === currentPageProfileUserName;
@@ -67,8 +69,39 @@ export const Profile = observer(() => {
         );
     }, [loadingProfile, user, hostUserProfile]);
 
-    if (loadingProfile || !currentProfileImageUrl || !profile)
-        return <LoadingComponent content="Loading profile" />;
+    useEffect(() => {
+        if (userName) {
+            const fetchProfiles = async () => {
+                await loadCurrentPageUserProfile(userName);
+            };
+
+            fetchProfiles()
+                .then(() => {
+                    getCurrentUser();
+                    getUserProfileImage(currentPageProfileUserName);
+                    getBio(currentPageProfileUserName);
+                    getFollowings(
+                        currentPageProfileUserName,
+                        FollowingTypes.Followings
+                    );
+                    getFollowings(
+                        currentPageProfileUserName,
+                        FollowingTypes.Followers
+                    );
+                    getEvents(
+                        currentPageProfileUserName,
+                        'future' as EventsCategories
+                    );
+                })
+                .catch(console.error);
+        }
+
+        return () => {
+            setActiveItem(ProfileDic.About as ProfileCategories);
+        };
+    }, [userName]);
+
+    if (loadingProfile) return <LoadingComponent content="Loading profile" />;
 
     return (
         <Segment.Group>

@@ -32,7 +32,6 @@ export default class CommonStore {
     }
 
     setAppLoaded = (value: boolean = true) => {
-        console.log('this.appLoaded', this.appLoaded, value);
         this.appLoaded = value;
     };
 }

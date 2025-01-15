@@ -23,11 +23,10 @@ export const Events = observer(
             }
         }, [renderedEvents, loadingEvents]);
 
-        const handleChange = (e: any, data: any) => {
+        const handleChange = (_: any, data: any) => {
             const activeIndex = data['activeIndex'];
             const tabLabelName = data.panes[activeIndex].menuItem as string;
             const eventTabType = getEventTabType(tabLabelName);
-            console.log(e);
             getEvents(props.currentPageProfileUserName, eventTabType);
         };
 

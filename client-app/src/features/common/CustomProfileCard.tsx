@@ -3,6 +3,7 @@ import { CustomAnimatedButton } from '../../app/common/CustomeAnimatedButton/Cus
 import { User } from '../../app/models/user';
 import { useState } from 'react';
 import { ProfileDic } from '../profile/Functions/profileDics';
+import { Link } from 'react-router-dom';
 
 interface CustomProfileCardProps {
     profileImage: string | null;
@@ -18,38 +19,47 @@ export const CustomProfileCard = (props: CustomProfileCardProps) => {
     const [followersCount, setFollowersCount] = useState(
         props.profileFollowCount
     );
+
     const getFollowerUnitName = (count: number) => {
         return count === 1 || count === 0
             ? ProfileDic.Follower
             : ProfileDic.Followers;
     };
+
     return (
         <Card style={{ cursor: 'pointer' }}>
             <Image
                 src={props.profileImage ?? '/assets/user.png'}
                 wrapped
                 ui={false}
-                onClick={() => {
-                    window.location.reload();
-                    location.assign(`/profile/${props.profileDisplayName}`);
-                }}
+                as={Link}
+                to={`/profile/${props.profileDisplayName.toLocaleLowerCase()}`}
+                // onClick={() => {
+                //     // navigate(`/profile/${props.profileDisplayName}`);
+                //     window.location.reload();
+                //     location.assign(`/profile/${props.profileDisplayName}`);
+                // }}
             ></Image>
             <CardContent>
                 <CardHeader
-                    onClick={() => {
-                        window.location.reload();
-                        location.assign(`/profile/${props.profileDisplayName}`);
-                    }}
+                    as={Link}
+                    to={`/profile/${props.profileDisplayName.toLocaleLowerCase()}`}
+                    // onClick={() => {
+                    //     window.location.reload();
+                    //     location.assign(`/profile/${props.profileDisplayName}`);
+                    // }}
                 >
                     {props.profileDisplayName}
                 </CardHeader>
             </CardContent>
             <CardContent
                 extra
-                onClick={() => {
-                    window.location.reload();
-                    location.assign(`/profile/${props.profileDisplayName}`);
-                }}
+                as={Link}
+                to={`/profile/${props.profileDisplayName.toLocaleLowerCase()}`}
+                // onClick={() => {
+                //     window.location.reload();
+                //     location.assign(`/profile/${props.profileDisplayName}`);
+                // }}
             >
                 <>
                     <Icon name="user" />

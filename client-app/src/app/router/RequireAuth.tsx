@@ -1,16 +1,16 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import { useStore } from '../stores/store';
+import { observer } from 'mobx-react-lite';
 
-export const RequireAuth = () => {
+export const RequireAuth = observer(() => {
     const {
         userStore: { isLoggedIn }
     } = useStore();
     const location = useLocation();
-    console.log('location', location, isLoggedIn);
 
     if (!isLoggedIn) {
         return <Navigate to="/" state={{ from: location }} />;
     }
 
     return <Outlet />;
-};
+});

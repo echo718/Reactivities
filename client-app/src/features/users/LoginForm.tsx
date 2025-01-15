@@ -21,8 +21,6 @@ export const LoginForm = observer(() => {
                         setErrors({ error: 'Invalid email or password' });
                         commonStore.setAppLoaded(false);
                     });
-
-                console.log(' commonStore.setAppLoaded();');
             }}
         >
             {

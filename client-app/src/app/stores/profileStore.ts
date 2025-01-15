@@ -100,8 +100,6 @@ export default class ProfileStore {
                         //todo: judge is host to show in nav bar
                         store.userStore.setImage(returedPhoto.url);
                         this.hostUserProfile.image = returedPhoto.url;
-
-                        console.log('addPhoto', this.hostUserProfile.image);
                     }
                 }
                 this.setLoadingProfile(false);

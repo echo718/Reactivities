@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader, Image } from 'semantic-ui-react';
 
 interface CustomEventCardProps {
@@ -13,36 +14,44 @@ export const CustomEventCard = (props: CustomEventCardProps) => {
         <Card style={{ cursor: 'pointer' }}>
             <Image
                 src={`/assets/categoryImages/${props.category?.toLowerCase()}.jpg`}
-                onClick={() => {
-                    window.location.reload();
-                    location.assign(`/activities/${props.id}`);
-                }}
+                as={Link}
+                to={`/activities/${props.id}`}
+                // onClick={() => {
+                //     window.location.reload();
+                //     location.assign(`/activities/${props.id}`);
+                // }}
             />
             <CardContent>
                 <CardHeader
-                    onClick={() => {
-                        window.location.reload();
-                        location.assign(`/activities/${props.id}`);
-                    }}
+                    as={Link}
+                    to={`/activities/${props.id}`}
+                    // onClick={() => {
+                    //     window.location.reload();
+                    //     location.assign(`/activities/${props.id}`);
+                    // }}
                 >
                     {props.title}
                 </CardHeader>
             </CardContent>
             <CardContent
                 extra
-                onClick={() => {
-                    window.location.reload();
-                    location.assign(`/activities/${props.id}`);
-                }}
+                as={Link}
+                to={`/activities/${props.id}`}
+                // onClick={() => {
+                //     window.location.reload();
+                //     location.assign(`/activities/${props.id}`);
+                // }}
             >
                 Activity Date: {props.date}
             </CardContent>
             <CardContent
                 extra
-                onClick={() => {
-                    window.location.reload();
-                    location.assign(`/activities/${props.id}`);
-                }}
+                as={Link}
+                to={`/activities/${props.id}`}
+                // onClick={() => {
+                //     window.location.reload();
+                //     location.assign(`/activities/${props.id}`);
+                // }}
             >
                 Activity Time: {props.time}
             </CardContent>

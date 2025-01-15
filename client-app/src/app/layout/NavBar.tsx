@@ -42,11 +42,11 @@ export const Navbar = observer(() => {
                                 to={`/profile/${user?.userName}`}
                                 text="My profile"
                                 icon="user"
-                                onClick={() =>
-                                    location.assign(
-                                        `/profile/${user?.userName}`
-                                    )
-                                }
+                                // onClick={() =>
+                                //     location.assign(
+                                //         `/profile/${user?.userName}`
+                                //     )
+                                // }
                             />
                             <Dropdown.Item
                                 onClick={logout}
