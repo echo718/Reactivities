@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, Icon, Image } from 'semantic-ui-react';
+import { Card, CardContent, CardHeader, Image } from 'semantic-ui-react';
 
 interface CustomEventCardProps {
     id: string;

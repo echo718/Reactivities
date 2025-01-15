@@ -3,10 +3,7 @@ import { Link } from 'react-router-dom';
 import { observer } from 'mobx-react-lite';
 import { Attendee } from '../../../app/models/activity';
 import { useStore } from '../../../app/stores/store';
-import {
-    FollowingTypes,
-    ProfileDic
-} from '../../profile/Functions/profileDics';
+import { FollowingTypes } from '../../profile/Functions/profileDics';
 
 interface Props {
     attendees: Attendee[];

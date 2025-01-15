@@ -46,16 +46,30 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+// else
+// {
+//     app.Use(async (context, next) =>
+//     {
+//         context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000");
+//         await next.Invoke();
+//     });
+// }
 
 //app.UseHttpsRedirection();
 
+//app.UseCors("CorsPolicy");
+
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseDefaultFiles(); //use wwwroot folders
+app.UseStaticFiles();
 
 app.UseCors(MyAllowSpecificOrigins);
 
 app.MapControllers();
 app.MapHub<ChatHub>("/chat");
+app.MapFallbackToController("Index", "Fallback");
 
 using var Scope = app.Services.CreateScope();
 var services = Scope.ServiceProvider;

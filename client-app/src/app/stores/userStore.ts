@@ -12,6 +12,7 @@ export default class UserStore {
     }
 
     get isLoggedIn() {
+        console.log('this.user', this.user);
         return !!this.user;
     }
 
@@ -19,6 +20,7 @@ export default class UserStore {
         const user: User = (await agent.Account.login(creds)) as User;
         store.commonStore.setToken(user.token);
         store.modalStore.closeModel();
+        console.log('login .user', user);
         runInAction(() => (this.user = user));
         router.navigate('/activities');
     };
@@ -41,6 +43,7 @@ export default class UserStore {
     getCurrentUser = async () => {
         try {
             const user = await agent.Account.current();
+            console.log('get current .user', user);
             runInAction(() => (this.user = user));
         } catch (err) {
             console.log(err);

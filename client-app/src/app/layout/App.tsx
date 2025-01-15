@@ -15,15 +15,25 @@ function App() {
     const { commonStore, userStore } = useStore();
 
     useEffect(() => {
+        console.log(
+            'commonStore.token',
+            commonStore.token,
+            commonStore.appLoaded
+        );
         if (commonStore.token) {
             userStore.getCurrentUser().finally(() => {
-                commonStore.setAppLoaded();
+                !commonStore.appLoaded && commonStore.setAppLoaded(true);
             });
         } else {
-            commonStore.setAppLoaded();
+            commonStore.setAppLoaded(false);
         }
     }, [commonStore, userStore]);
 
+    console.log(
+        'commonStore.appLoaded',
+        commonStore.appLoaded,
+        location.pathname
+    );
     if (!commonStore.appLoaded)
         return <LoadingComponent content="loading app..." />;
 

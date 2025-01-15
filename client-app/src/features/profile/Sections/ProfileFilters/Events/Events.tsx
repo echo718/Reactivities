@@ -27,7 +27,7 @@ export const Events = observer(
             const activeIndex = data['activeIndex'];
             const tabLabelName = data.panes[activeIndex].menuItem as string;
             const eventTabType = getEventTabType(tabLabelName);
-
+            console.log(e);
             getEvents(props.currentPageProfileUserName, eventTabType);
         };
 

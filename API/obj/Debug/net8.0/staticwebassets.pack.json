@@ -1,0 +1,205 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\AboutImage.jpg",
+      "PackagePath": "staticwebassets\\assets\\AboutImage.jpg"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\Thumbs.db",
+      "PackagePath": "staticwebassets\\assets\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\activities.png",
+      "PackagePath": "staticwebassets\\assets\\activities.png"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-Cu_C0hZ4.svg",
+      "PackagePath": "staticwebassets\\assets\\brand-icons-Cu_C0hZ4.svg"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-F3SPCeH1.woff",
+      "PackagePath": "staticwebassets\\assets\\brand-icons-F3SPCeH1.woff"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-XL9sxUpA.woff2",
+      "PackagePath": "staticwebassets\\assets\\brand-icons-XL9sxUpA.woff2"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-sqJ2Pg7a.eot",
+      "PackagePath": "staticwebassets\\assets\\brand-icons-sqJ2Pg7a.eot"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-ubhWoxly.ttf",
+      "PackagePath": "staticwebassets\\assets\\brand-icons-ubhWoxly.ttf"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\culture.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\culture.jpg"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\drinks.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\drinks.jpg"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\film.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\film.jpg"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\food.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\food.jpg"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\music.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\music.jpg"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\travel.jpg",
+      "PackagePath": "staticwebassets\\assets\\categoryImages\\travel.jpg"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\flags-DOLqOU7Y.png",
+      "PackagePath": "staticwebassets\\assets\\flags-DOLqOU7Y.png"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\gallery.png",
+      "PackagePath": "staticwebassets\\assets\\gallery.png"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-BOCtAERH.woff",
+      "PackagePath": "staticwebassets\\assets\\icons-BOCtAERH.woff"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-CHzK1VD9.eot",
+      "PackagePath": "staticwebassets\\assets\\icons-CHzK1VD9.eot"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-D29ZQHHw.ttf",
+      "PackagePath": "staticwebassets\\assets\\icons-D29ZQHHw.ttf"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-Du6TOHnR.woff2",
+      "PackagePath": "staticwebassets\\assets\\icons-Du6TOHnR.woff2"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-RwhydX30.svg",
+      "PackagePath": "staticwebassets\\assets\\icons-RwhydX30.svg"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-B9STDAT-.js",
+      "PackagePath": "staticwebassets\\assets\\index-B9STDAT-.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BQm833Vh.css",
+      "PackagePath": "staticwebassets\\assets\\index-BQm833Vh.css"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BZoUD9ir.js",
+      "PackagePath": "staticwebassets\\assets\\index-BZoUD9ir.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BfgST5-k.js",
+      "PackagePath": "staticwebassets\\assets\\index-BfgST5-k.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BmLyPqbb.js",
+      "PackagePath": "staticwebassets\\assets\\index-BmLyPqbb.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-C8qS-yvX.js",
+      "PackagePath": "staticwebassets\\assets\\index-C8qS-yvX.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CzawnDt-.js",
+      "PackagePath": "staticwebassets\\assets\\index-CzawnDt-.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-D-bhX_1_.js",
+      "PackagePath": "staticwebassets\\assets\\index-D-bhX_1_.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DBppjvhP.js",
+      "PackagePath": "staticwebassets\\assets\\index-DBppjvhP.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DFelhqzA.js",
+      "PackagePath": "staticwebassets\\assets\\index-DFelhqzA.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DOv-qZqV.js",
+      "PackagePath": "staticwebassets\\assets\\index-DOv-qZqV.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DaCIQ-8L.js",
+      "PackagePath": "staticwebassets\\assets\\index-DaCIQ-8L.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DlfTLKPe.js",
+      "PackagePath": "staticwebassets\\assets\\index-DlfTLKPe.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-fncvPaC-.js",
+      "PackagePath": "staticwebassets\\assets\\index-fncvPaC-.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-w7NwJCcx.js",
+      "PackagePath": "staticwebassets\\assets\\index-w7NwJCcx.js"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\logo.png"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-BfdLr8tr.svg",
+      "PackagePath": "staticwebassets\\assets\\outline-icons-BfdLr8tr.svg"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-DD8jm0uy.ttf",
+      "PackagePath": "staticwebassets\\assets\\outline-icons-DD8jm0uy.ttf"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-DInHoiqI.woff2",
+      "PackagePath": "staticwebassets\\assets\\outline-icons-DInHoiqI.woff2"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-LX8adJ4n.eot",
+      "PackagePath": "staticwebassets\\assets\\outline-icons-LX8adJ4n.eot"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-aQ88nltS.woff",
+      "PackagePath": "staticwebassets\\assets\\outline-icons-aQ88nltS.woff"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\placeholder.png",
+      "PackagePath": "staticwebassets\\assets\\placeholder.png"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\user.png",
+      "PackagePath": "staticwebassets\\assets\\user.png"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\vite.svg",
+      "PackagePath": "staticwebassets\\vite.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.API.props",
+      "PackagePath": "build\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.API.props",
+      "PackagePath": "buildMultiTargeting\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.API.props",
+      "PackagePath": "buildTransitive\\API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
