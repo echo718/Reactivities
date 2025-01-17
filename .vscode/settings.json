@@ -3,5 +3,7 @@
   "editor.wordWrap": "off",
   "editor.inlayHints.maximumLength": 30,
   "editor.formatOnSave": true,
-  "typescript.tsserver.enableTracing": true
+  "typescript.tsserver.enableTracing": true,
+  "appService.defaultWebAppToDeploy": "/subscriptions/39cbb001-2884-42e9-889a-50b77035bab8/resourceGroups/Reactivities-group/providers/Microsoft.Web/sites/reactivities-echo",
+  "appService.deploySubpath": "API\\bin\\Publish"
 }

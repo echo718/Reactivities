@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VF6HQeopsZsE2IHrGq3uaUi/pGAiISUXxdt3XCb7qSU=",
+  "Hash": "Hl2V3F+oaCmZO5Y9Y/aiiT8vRxaG15+SkhiwcA8SnuU=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "API\\wwwroot",
       "Source": "API",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\AboutImage.jpg",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\AboutImage.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/AboutImage.jpg",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\AboutImage.jpg"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\activities.png",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\activities.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/activities.png",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\activities.png"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-Cu_C0hZ4.svg",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\brand-icons-Cu_C0hZ4.svg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/brand-icons-Cu_C0hZ4.svg",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\brand-icons-Cu_C0hZ4.svg"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-F3SPCeH1.woff",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\brand-icons-F3SPCeH1.woff",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/brand-icons-F3SPCeH1.woff",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\brand-icons-F3SPCeH1.woff"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-sqJ2Pg7a.eot",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\brand-icons-sqJ2Pg7a.eot",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/brand-icons-sqJ2Pg7a.eot",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\brand-icons-sqJ2Pg7a.eot"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-ubhWoxly.ttf",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\brand-icons-ubhWoxly.ttf",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/brand-icons-ubhWoxly.ttf",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\brand-icons-ubhWoxly.ttf"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-XL9sxUpA.woff2",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\brand-icons-XL9sxUpA.woff2",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/brand-icons-XL9sxUpA.woff2",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\brand-icons-XL9sxUpA.woff2"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\culture.jpg",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\categoryImages\\culture.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/categoryImages/culture.jpg",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\culture.jpg"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\drinks.jpg",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\categoryImages\\drinks.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/categoryImages/drinks.jpg",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\drinks.jpg"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\film.jpg",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\categoryImages\\film.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/categoryImages/film.jpg",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\film.jpg"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\food.jpg",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\categoryImages\\food.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/categoryImages/food.jpg",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\food.jpg"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\music.jpg",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\categoryImages\\music.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/categoryImages/music.jpg",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\music.jpg"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\travel.jpg",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\categoryImages\\travel.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/categoryImages/travel.jpg",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\categoryImages\\travel.jpg"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\flags-DOLqOU7Y.png",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\flags-DOLqOU7Y.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/flags-DOLqOU7Y.png",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\flags-DOLqOU7Y.png"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\gallery.png",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\gallery.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/gallery.png",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\gallery.png"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-BOCtAERH.woff",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\icons-BOCtAERH.woff",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/icons-BOCtAERH.woff",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icons-BOCtAERH.woff"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-CHzK1VD9.eot",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\icons-CHzK1VD9.eot",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/icons-CHzK1VD9.eot",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icons-CHzK1VD9.eot"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-D29ZQHHw.ttf",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\icons-D29ZQHHw.ttf",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/icons-D29ZQHHw.ttf",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icons-D29ZQHHw.ttf"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-Du6TOHnR.woff2",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\icons-Du6TOHnR.woff2",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/icons-Du6TOHnR.woff2",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icons-Du6TOHnR.woff2"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-RwhydX30.svg",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\icons-RwhydX30.svg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/icons-RwhydX30.svg",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\icons-RwhydX30.svg"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index--2vS5YbK.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index--2vS5YbK.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index--2vS5YbK.js",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index--2vS5YbK.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index--DMNJUDy.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index--DMNJUDy.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index--DMNJUDy.js",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index--DMNJUDy.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-3MHdUpYu.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-3MHdUpYu.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-3MHdUpYu.js",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-3MHdUpYu.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-3t4TtW3s.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-3t4TtW3s.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-3t4TtW3s.js",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-3t4TtW3s.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-80GHryA1.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-80GHryA1.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-80GHryA1.js",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-80GHryA1.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-B5EwVGLd.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-B5EwVGLd.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-B5EwVGLd.js",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-B5EwVGLd.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-B9STDAT-.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-B9STDAT-.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-B9STDAT-.js",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-B9STDAT-.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BfgST5-k.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-BfgST5-k.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-BfgST5-k.js",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-BfgST5-k.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BI7OPkD8.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-BI7OPkD8.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-BI7OPkD8.js",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-BI7OPkD8.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-Bjo_oIBy.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-Bjo_oIBy.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-Bjo_oIBy.js",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-Bjo_oIBy.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BmLyPqbb.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-BmLyPqbb.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-BmLyPqbb.js",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-BmLyPqbb.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BnvcBS1I.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-BnvcBS1I.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-BnvcBS1I.js",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-BnvcBS1I.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BohV9hWn.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-BohV9hWn.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-BohV9hWn.js",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-BohV9hWn.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BQm833Vh.css",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-BQm833Vh.css",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-BQm833Vh.css",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-BQm833Vh.css"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BZoUD9ir.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-BZoUD9ir.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-BZoUD9ir.js",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-BZoUD9ir.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-C1F96fU9.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-C1F96fU9.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-C1F96fU9.js",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-C1F96fU9.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-C8qS-yvX.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-C8qS-yvX.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-C8qS-yvX.js",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-C8qS-yvX.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-cffWs0Ig.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-cffWs0Ig.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-cffWs0Ig.js",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-cffWs0Ig.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CJb8DI3X.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-CJb8DI3X.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-CJb8DI3X.js",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-CJb8DI3X.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CkpzCe-A.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-CkpzCe-A.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-CkpzCe-A.js",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-CkpzCe-A.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CmD6E4Nx.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-CmD6E4Nx.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-CmD6E4Nx.js",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-CmD6E4Nx.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CR5hcT4G.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-CR5hcT4G.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-CR5hcT4G.js",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-CR5hcT4G.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CuPxkng1.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-CuPxkng1.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-CuPxkng1.js",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-CuPxkng1.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CV0E03P-.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-CV0E03P-.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-CV0E03P-.js",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-CV0E03P-.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CYiLnfbE.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-CYiLnfbE.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-CYiLnfbE.js",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-CYiLnfbE.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CzawnDt-.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-CzawnDt-.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-CzawnDt-.js",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-CzawnDt-.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-D-bhX_1_.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-D-bhX_1_.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-D-bhX_1_.js",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-D-bhX_1_.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-D25ZURnM.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-D25ZURnM.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-D25ZURnM.js",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-D25ZURnM.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DaCIQ-8L.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-DaCIQ-8L.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-DaCIQ-8L.js",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-DaCIQ-8L.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DBppjvhP.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-DBppjvhP.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-DBppjvhP.js",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-DBppjvhP.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DFelhqzA.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-DFelhqzA.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-DFelhqzA.js",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-DFelhqzA.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DJpPJ7Q_.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-DJpPJ7Q_.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-DJpPJ7Q_.js",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-DJpPJ7Q_.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DlfTLKPe.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-DlfTLKPe.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-DlfTLKPe.js",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-DlfTLKPe.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DnYngsD5.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-DnYngsD5.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-DnYngsD5.js",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-DnYngsD5.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DOv-qZqV.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-DOv-qZqV.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-DOv-qZqV.js",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-DOv-qZqV.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DPkM061c.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-DPkM061c.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-DPkM061c.js",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-DPkM061c.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-fjUQrSwa.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-fjUQrSwa.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-fjUQrSwa.js",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-fjUQrSwa.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-fncvPaC-.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-fncvPaC-.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-fncvPaC-.js",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-fncvPaC-.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-gux9KedU.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-gux9KedU.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-gux9KedU.js",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-gux9KedU.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-Job9T8kK.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-Job9T8kK.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-Job9T8kK.js",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-Job9T8kK.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-kqZ9WR5t.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-kqZ9WR5t.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-kqZ9WR5t.js",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-kqZ9WR5t.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-vcngmHHj.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-vcngmHHj.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-vcngmHHj.js",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-vcngmHHj.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-w7NwJCcx.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-w7NwJCcx.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-w7NwJCcx.js",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-w7NwJCcx.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-zCCv8rmW.js",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\index-zCCv8rmW.js",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/index-zCCv8rmW.js",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\index-zCCv8rmW.js"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\logo.png",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\logo.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/logo.png",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\logo.png"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-aQ88nltS.woff",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\outline-icons-aQ88nltS.woff",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/outline-icons-aQ88nltS.woff",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\outline-icons-aQ88nltS.woff"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-BfdLr8tr.svg",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\outline-icons-BfdLr8tr.svg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/outline-icons-BfdLr8tr.svg",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\outline-icons-BfdLr8tr.svg"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-DD8jm0uy.ttf",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\outline-icons-DD8jm0uy.ttf",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/outline-icons-DD8jm0uy.ttf",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\outline-icons-DD8jm0uy.ttf"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-DInHoiqI.woff2",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\outline-icons-DInHoiqI.woff2",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/outline-icons-DInHoiqI.woff2",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\outline-icons-DInHoiqI.woff2"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-LX8adJ4n.eot",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\outline-icons-LX8adJ4n.eot",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/outline-icons-LX8adJ4n.eot",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\outline-icons-LX8adJ4n.eot"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\placeholder.png",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\placeholder.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/placeholder.png",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\placeholder.png"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\Thumbs.db",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\Thumbs.db",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/Thumbs.db",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\Thumbs.db"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\user.png",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\assets\\user.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "assets/user.png",
       "AssetKind": "All",
@@ -1404,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\assets\\user.png"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\index.html",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\index.html",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -1423,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\vite.svg",
+      "Identity": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\vite.svg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\",
+      "ContentRoot": "D:\\vscodeFolder\\Reactivities1\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "vite.svg",
       "AssetKind": "All",
