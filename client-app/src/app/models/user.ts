@@ -12,7 +12,7 @@ export interface BasicDetail {
 export interface UserFormValues {
     email: string;
     password: string;
-    userName?: number;
+    userName?: string;
     displayName?: string;
 }
 

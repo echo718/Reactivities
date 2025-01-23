@@ -1,303 +1,135 @@
 {
   "Files": [
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\AboutImage.jpg",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\AboutImage.jpg",
       "PackagePath": "staticwebassets\\assets\\AboutImage.jpg"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\Thumbs.db",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\Thumbs.db",
       "PackagePath": "staticwebassets\\assets\\Thumbs.db"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\activities.png",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\activities.png",
       "PackagePath": "staticwebassets\\assets\\activities.png"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-Cu_C0hZ4.svg",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\brand-icons-Cu_C0hZ4.svg",
       "PackagePath": "staticwebassets\\assets\\brand-icons-Cu_C0hZ4.svg"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-F3SPCeH1.woff",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\brand-icons-F3SPCeH1.woff",
       "PackagePath": "staticwebassets\\assets\\brand-icons-F3SPCeH1.woff"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-XL9sxUpA.woff2",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\brand-icons-XL9sxUpA.woff2",
       "PackagePath": "staticwebassets\\assets\\brand-icons-XL9sxUpA.woff2"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-sqJ2Pg7a.eot",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\brand-icons-sqJ2Pg7a.eot",
       "PackagePath": "staticwebassets\\assets\\brand-icons-sqJ2Pg7a.eot"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\brand-icons-ubhWoxly.ttf",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\brand-icons-ubhWoxly.ttf",
       "PackagePath": "staticwebassets\\assets\\brand-icons-ubhWoxly.ttf"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\culture.jpg",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\categoryImages\\culture.jpg",
       "PackagePath": "staticwebassets\\assets\\categoryImages\\culture.jpg"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\drinks.jpg",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\categoryImages\\drinks.jpg",
       "PackagePath": "staticwebassets\\assets\\categoryImages\\drinks.jpg"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\film.jpg",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\categoryImages\\film.jpg",
       "PackagePath": "staticwebassets\\assets\\categoryImages\\film.jpg"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\food.jpg",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\categoryImages\\food.jpg",
       "PackagePath": "staticwebassets\\assets\\categoryImages\\food.jpg"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\music.jpg",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\categoryImages\\music.jpg",
       "PackagePath": "staticwebassets\\assets\\categoryImages\\music.jpg"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\categoryImages\\travel.jpg",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\categoryImages\\travel.jpg",
       "PackagePath": "staticwebassets\\assets\\categoryImages\\travel.jpg"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\flags-DOLqOU7Y.png",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\flags-DOLqOU7Y.png",
       "PackagePath": "staticwebassets\\assets\\flags-DOLqOU7Y.png"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\gallery.png",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\gallery.png",
       "PackagePath": "staticwebassets\\assets\\gallery.png"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-BOCtAERH.woff",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\icons-BOCtAERH.woff",
       "PackagePath": "staticwebassets\\assets\\icons-BOCtAERH.woff"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-CHzK1VD9.eot",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\icons-CHzK1VD9.eot",
       "PackagePath": "staticwebassets\\assets\\icons-CHzK1VD9.eot"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-D29ZQHHw.ttf",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\icons-D29ZQHHw.ttf",
       "PackagePath": "staticwebassets\\assets\\icons-D29ZQHHw.ttf"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-Du6TOHnR.woff2",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\icons-Du6TOHnR.woff2",
       "PackagePath": "staticwebassets\\assets\\icons-Du6TOHnR.woff2"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\icons-RwhydX30.svg",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\icons-RwhydX30.svg",
       "PackagePath": "staticwebassets\\assets\\icons-RwhydX30.svg"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index--2vS5YbK.js",
-      "PackagePath": "staticwebassets\\assets\\index--2vS5YbK.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index--DMNJUDy.js",
-      "PackagePath": "staticwebassets\\assets\\index--DMNJUDy.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-3MHdUpYu.js",
-      "PackagePath": "staticwebassets\\assets\\index-3MHdUpYu.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-3t4TtW3s.js",
-      "PackagePath": "staticwebassets\\assets\\index-3t4TtW3s.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-80GHryA1.js",
-      "PackagePath": "staticwebassets\\assets\\index-80GHryA1.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-B5EwVGLd.js",
-      "PackagePath": "staticwebassets\\assets\\index-B5EwVGLd.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-B9STDAT-.js",
-      "PackagePath": "staticwebassets\\assets\\index-B9STDAT-.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BI7OPkD8.js",
-      "PackagePath": "staticwebassets\\assets\\index-BI7OPkD8.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BQm833Vh.css",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\index-BQm833Vh.css",
       "PackagePath": "staticwebassets\\assets\\index-BQm833Vh.css"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BZoUD9ir.js",
-      "PackagePath": "staticwebassets\\assets\\index-BZoUD9ir.js"
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\index-BcJhe31C.js",
+      "PackagePath": "staticwebassets\\assets\\index-BcJhe31C.js"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BfgST5-k.js",
-      "PackagePath": "staticwebassets\\assets\\index-BfgST5-k.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-Bjo_oIBy.js",
-      "PackagePath": "staticwebassets\\assets\\index-Bjo_oIBy.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BmLyPqbb.js",
-      "PackagePath": "staticwebassets\\assets\\index-BmLyPqbb.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BnvcBS1I.js",
-      "PackagePath": "staticwebassets\\assets\\index-BnvcBS1I.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-BohV9hWn.js",
-      "PackagePath": "staticwebassets\\assets\\index-BohV9hWn.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-C1F96fU9.js",
-      "PackagePath": "staticwebassets\\assets\\index-C1F96fU9.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-C8qS-yvX.js",
-      "PackagePath": "staticwebassets\\assets\\index-C8qS-yvX.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CJb8DI3X.js",
-      "PackagePath": "staticwebassets\\assets\\index-CJb8DI3X.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CR5hcT4G.js",
-      "PackagePath": "staticwebassets\\assets\\index-CR5hcT4G.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CV0E03P-.js",
-      "PackagePath": "staticwebassets\\assets\\index-CV0E03P-.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CYiLnfbE.js",
-      "PackagePath": "staticwebassets\\assets\\index-CYiLnfbE.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CkpzCe-A.js",
-      "PackagePath": "staticwebassets\\assets\\index-CkpzCe-A.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CmD6E4Nx.js",
-      "PackagePath": "staticwebassets\\assets\\index-CmD6E4Nx.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CuPxkng1.js",
-      "PackagePath": "staticwebassets\\assets\\index-CuPxkng1.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-CzawnDt-.js",
-      "PackagePath": "staticwebassets\\assets\\index-CzawnDt-.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-D-bhX_1_.js",
-      "PackagePath": "staticwebassets\\assets\\index-D-bhX_1_.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-D25ZURnM.js",
-      "PackagePath": "staticwebassets\\assets\\index-D25ZURnM.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DBppjvhP.js",
-      "PackagePath": "staticwebassets\\assets\\index-DBppjvhP.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DFelhqzA.js",
-      "PackagePath": "staticwebassets\\assets\\index-DFelhqzA.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DJpPJ7Q_.js",
-      "PackagePath": "staticwebassets\\assets\\index-DJpPJ7Q_.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DOv-qZqV.js",
-      "PackagePath": "staticwebassets\\assets\\index-DOv-qZqV.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DPkM061c.js",
-      "PackagePath": "staticwebassets\\assets\\index-DPkM061c.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DaCIQ-8L.js",
-      "PackagePath": "staticwebassets\\assets\\index-DaCIQ-8L.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DlfTLKPe.js",
-      "PackagePath": "staticwebassets\\assets\\index-DlfTLKPe.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-DnYngsD5.js",
-      "PackagePath": "staticwebassets\\assets\\index-DnYngsD5.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-Job9T8kK.js",
-      "PackagePath": "staticwebassets\\assets\\index-Job9T8kK.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-cffWs0Ig.js",
-      "PackagePath": "staticwebassets\\assets\\index-cffWs0Ig.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-fjUQrSwa.js",
-      "PackagePath": "staticwebassets\\assets\\index-fjUQrSwa.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-fncvPaC-.js",
-      "PackagePath": "staticwebassets\\assets\\index-fncvPaC-.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-gux9KedU.js",
-      "PackagePath": "staticwebassets\\assets\\index-gux9KedU.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-kqZ9WR5t.js",
-      "PackagePath": "staticwebassets\\assets\\index-kqZ9WR5t.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-vcngmHHj.js",
-      "PackagePath": "staticwebassets\\assets\\index-vcngmHHj.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-w7NwJCcx.js",
-      "PackagePath": "staticwebassets\\assets\\index-w7NwJCcx.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\index-zCCv8rmW.js",
-      "PackagePath": "staticwebassets\\assets\\index-zCCv8rmW.js"
-    },
-    {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\logo.png",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\logo.png",
       "PackagePath": "staticwebassets\\assets\\logo.png"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-BfdLr8tr.svg",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\outline-icons-BfdLr8tr.svg",
       "PackagePath": "staticwebassets\\assets\\outline-icons-BfdLr8tr.svg"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-DD8jm0uy.ttf",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\outline-icons-DD8jm0uy.ttf",
       "PackagePath": "staticwebassets\\assets\\outline-icons-DD8jm0uy.ttf"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-DInHoiqI.woff2",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\outline-icons-DInHoiqI.woff2",
       "PackagePath": "staticwebassets\\assets\\outline-icons-DInHoiqI.woff2"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-LX8adJ4n.eot",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\outline-icons-LX8adJ4n.eot",
       "PackagePath": "staticwebassets\\assets\\outline-icons-LX8adJ4n.eot"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\outline-icons-aQ88nltS.woff",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\outline-icons-aQ88nltS.woff",
       "PackagePath": "staticwebassets\\assets\\outline-icons-aQ88nltS.woff"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\placeholder.png",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\placeholder.png",
       "PackagePath": "staticwebassets\\assets\\placeholder.png"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\assets\\user.png",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\assets\\user.png",
       "PackagePath": "staticwebassets\\assets\\user.png"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\index.html",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\vscodeFolder\\Reactivities1\\api\\wwwroot\\vite.svg",
+      "Id": "D:\\vscodeFolder\\reactivities1\\api\\wwwroot\\vite.svg",
       "PackagePath": "staticwebassets\\vite.svg"
     },
     {
