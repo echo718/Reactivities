@@ -9,7 +9,7 @@ namespace API.Dtos
         public string Email { get; set; }
 
         [Required]
-        [RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$", ErrorMessage = "Password should be at least one number and one letter, minimum length 8")]
+        // [RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$", ErrorMessage = "Password should be at least one number and one letter, minimum length 8")]
         public string Password { get; set; }
         public string DisplayName { get; set; }
         [Required]

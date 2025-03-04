@@ -91,9 +91,9 @@ export default observer(function ActivityDetailedChat({ activityId }: Props) {
                                 <Comment.Content>
                                     <Comment.Author
                                         as={Link}
-                                        to={`/profiles/${comment.userName}`}
+                                        to={`/profile/${comment.userName}`}
                                     >
-                                        {comment.userName}
+                                        {comment.displayName}
                                     </Comment.Author>
                                     <Comment.Metadata>
                                         <div>

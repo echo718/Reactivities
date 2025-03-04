@@ -87,11 +87,10 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                         color="teal"
                         onClick={() => {
                             activityStore.updateActivityStatus(activity.id);
-                            location.reload();
                         }}
                         disabled={
                             activity.hostUserName.toLocaleLowerCase() !==
-                            user?.displayName.toLocaleLowerCase()
+                            user?.userName.toLocaleLowerCase()
                         }
                     >
                         Re-Activity activity
@@ -104,7 +103,6 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                         disabled={isExistInActivity(user?.userName)}
                         onClick={() => {
                             activityStore.attendActivity(activity.id);
-                            location.reload();
                         }}
                     >
                         Join Activity
@@ -113,7 +111,6 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                         disabled={!isExistInActivity(user?.userName)}
                         onClick={() => {
                             activityStore.updateActivityStatus(activity.id);
-                            location.reload();
                         }}
                     >
                         Cancel attendance

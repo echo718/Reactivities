@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MR17yI3Lu5I=",
+  "dgSpecHash": "UfeH1AsHve8=",
   "success": true,
-  "projectFilePath": "D:\\vscodeFolder\\reactivities1\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "D:\\vscodeFolder\\Reactivities1\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sunto\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\sunto\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

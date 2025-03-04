@@ -15,6 +15,7 @@ function App() {
     const { commonStore, userStore } = useStore();
 
     useEffect(() => {
+        console.log('commonStore.token', commonStore.token);
         if (commonStore.token) {
             userStore.getCurrentUser().finally(() => {
                 !commonStore.appLoaded && commonStore.setAppLoaded(true);
@@ -23,6 +24,8 @@ function App() {
             commonStore.setAppLoaded(false);
         }
     }, [commonStore, userStore]);
+
+    console.log('commonStore.appLoaded', commonStore.appLoaded);
 
     if (!commonStore.appLoaded)
         return <LoadingComponent content="loading app..." />;

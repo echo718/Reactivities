@@ -29,8 +29,8 @@
               "D:\\vscodeFolder\\Reactivities1\\Application\\Application.csproj": {
                 "projectPath": "D:\\vscodeFolder\\Reactivities1\\Application\\Application.csproj"
               },
-              "D:\\vscodeFolder\\reactivities1\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\vscodeFolder\\reactivities1\\Infrastructure\\Infrastructure.csproj"
+              "D:\\vscodeFolder\\Reactivities1\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\vscodeFolder\\Reactivities1\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -243,14 +243,14 @@
         }
       }
     },
-    "D:\\vscodeFolder\\reactivities1\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\vscodeFolder\\Reactivities1\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\vscodeFolder\\reactivities1\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\vscodeFolder\\Reactivities1\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\vscodeFolder\\reactivities1\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\vscodeFolder\\Reactivities1\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\sunto\\.nuget\\packages\\",
-        "outputPath": "D:\\vscodeFolder\\reactivities1\\Infrastructure\\obj\\",
+        "outputPath": "D:\\vscodeFolder\\Reactivities1\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sunto\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -31,23 +31,24 @@ export default class ActivityStore {
         this.pagingParams = pagingParms;
     };
 
-    setPredicate = (predicate: string, value: string | Date) => {
-        const resetPredicate = () => {
-            this.predicate.forEach((key) => {
-                if (key !== 'startDate') this.predicate.delete(key);
-            });
-        };
-        switch (predicate) {
+    resetPredicate = () => {
+        this.predicate.forEach((value, key) => {
+            if (key !== 'startDate') this.predicate.delete(key);
+        });
+    };
+
+    setPredicate = (predicateType: string, value: any) => {
+        switch (predicateType) {
             case 'all':
-                resetPredicate();
+                this.resetPredicate();
                 this.predicate.set('all', true);
                 break;
             case 'isGoing':
-                resetPredicate();
+                this.resetPredicate();
                 this.predicate.set('isGoing', true);
                 break;
             case 'isHosting':
-                resetPredicate();
+                this.resetPredicate();
                 this.predicate.set('isHosting', true);
                 break;
             case 'startDate':
@@ -198,6 +199,7 @@ export default class ActivityStore {
         this.loading = true;
         try {
             await agent.Activities.attend(id);
+            await this.loadActivity(id);
             runInAction(() => {
                 //this.activityRegistry.set(activity.id, activity);
                 //this.selectedActivity = activity;
@@ -216,6 +218,7 @@ export default class ActivityStore {
         this.loading = true;
         try {
             await agent.Activities.cancel(id);
+            await this.loadActivity(id);
             runInAction(() => {
                 //this.activityRegistry.set(activity.id, activity);
                 //this.selectedActivity = activity;

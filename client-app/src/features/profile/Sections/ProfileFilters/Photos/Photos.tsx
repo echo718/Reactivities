@@ -14,7 +14,7 @@ import { Photo, Profile } from '../../../../../app/models/user';
 import { useStore } from '../../../../../app/stores/store';
 
 export const Photos = observer((props: { profile: Profile | null }) => {
-    const { profileStore } = useStore();
+    const { profileStore, commonStore, userStore } = useStore();
     const { deletePhotos, setMain } = profileStore;
 
     return (
@@ -52,7 +52,7 @@ export const Photos = observer((props: { profile: Profile | null }) => {
                                     disabled={photo.isMain}
                                     onClick={() => {
                                         setMain(photo.id);
-                                        location.reload();
+                                        //location.reload();
                                     }}
                                 >
                                     Set to Main

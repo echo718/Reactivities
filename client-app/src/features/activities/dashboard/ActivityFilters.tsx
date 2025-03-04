@@ -19,17 +19,17 @@ export const ActivityFilters = observer(() => {
                 <Menu.Item
                     content="All Activities"
                     active={predicate.has('all')}
-                    onClick={() => setPredicate('all', 'true')}
+                    onClick={() => setPredicate('all', true)}
                 />
                 <Menu.Item
                     content="I'm going"
                     active={predicate.has('isGoing')}
-                    onClick={() => setPredicate('isGoing', 'true')}
+                    onClick={() => setPredicate('isGoing', true)}
                 />
                 <Menu.Item
                     content="I'm hosting"
                     active={predicate.has('isHosting')}
-                    onClick={() => setPredicate('isHosting', 'true')}
+                    onClick={() => setPredicate('isHosting', true)}
                 />
             </Menu>
             <Header />

@@ -42,7 +42,7 @@ export default observer(function ActivityDetailedSidebar({
             <Segment attached>
                 {sortedByDisplayNameAttendees.map((attendee) => {
                     const isActivityHost =
-                        attendee.displayName.toLowerCase() ===
+                        attendee.userName.toLowerCase() ===
                         hostUserName.toLowerCase();
                     const isHostName =
                         userStore.user?.displayName === attendee.displayName;

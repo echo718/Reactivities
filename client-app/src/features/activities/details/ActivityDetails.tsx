@@ -15,6 +15,7 @@ export const ActivityDetails = observer(() => {
         selectedActivity,
         loadActivity,
         loadingInitial,
+        loading,
         loadActivities,
         clearSelectedActivity
     } = activityStore;
@@ -35,7 +36,8 @@ export const ActivityDetails = observer(() => {
         clearSelectedActivity();
     }, [id, loadActivity, clearSelectedActivity]);
 
-    if (loadingInitial || !selectedActivity) return <LoadingComponent />;
+    if (loadingInitial || !selectedActivity || loading)
+        return <LoadingComponent content="Loading activity" />;
 
     return (
         <Grid>
